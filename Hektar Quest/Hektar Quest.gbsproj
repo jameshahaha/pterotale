@@ -3328,7 +3328,7 @@
             "autoFadeSpeed": 1,
             "id": "6a17e975-309a-43d7-b596-b2ef0c2eb060",
             "x": 1346.0888888888892,
-            "y": 52.22222222222222,
+            "y": 51.422222222222224,
             "actors": [],
             "triggers": [
                 {
@@ -3414,35 +3414,56 @@
                             {
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
-                                    "variable": "13"
+                                    "variable": "13",
+                                    "__collapse": true
                                 },
                                 "id": "4b092c4f-e86c-4c38-8558-a3f76e03b3f8"
                             },
                             {
-                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "command": "EVENT_IF_FALSE",
                                 "args": {
-                                    "__scriptTabs": "text",
-                                    "text": [
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press Z)",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I haven't had\na day off in\nforever!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Suppose it's \ntime to get \nout of bed.\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I can walk\nwith WASD or\nthe arrow \nkeys.!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I can interact\nwith the 'Z'\nkey and cancel\nwith 'X'!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
-                                    ],
-                                    "nameTag": "Hektar",
-                                    "nameX": 2,
-                                    "avatarType": "large",
-                                    "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
-                                    "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
-                                    "avatarX": 2,
-                                    "avatarY": 2,
-                                    "avatarWidth": 4,
-                                    "orientation": "left",
-                                    "__collapse": false,
-                                    "__comment": true
+                                    "variable": "L0",
+                                    "__collapseElse": true,
+                                    "__collapse": false
                                 },
-                                "id": "b735b9fd-eac6-4fb3-aabb-b670900bb01b"
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press A)",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I haven't had\na day off in\nforever!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Suppose it's \ntime to get \nout of bed.\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!DPAD - Walk\nA - Interact\nB - Cancel\nSTART - Menu!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
+                                                ],
+                                                "nameTag": "Hektar",
+                                                "nameX": 2,
+                                                "avatarType": "large",
+                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 4,
+                                                "orientation": "left",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            },
+                                            "id": "b735b9fd-eac6-4fb3-aabb-b670900bb01b"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "L0"
+                                            },
+                                            "id": "5f748afb-4731-45d4-bcd2-40f2687cfa55"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "c7470e3d-3e19-401a-bdfc-1c4880f8df09"
                             }
                         ],
                         "false": []
@@ -4395,33 +4416,14 @@
                     "isPinned": false,
                     "script": [
                         {
-                            "command": "EVENT_IF_TRUE",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "variable": "13",
-                                "__collapseElse": true,
-                                "__collapse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_SHOW",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        },
-                                        "id": "1abb7e74-b62a-486f-9223-3f8250a6b25a"
-                                    }
+                                "text": [
+                                    "Get lost! \nGo to Kangapost!!"
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_ACTOR_HIDE",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        },
-                                        "id": "b9a8f6a5-0936-4fae-817c-57e696196f58"
-                                    }
-                                ]
+                                "avatarId": ""
                             },
-                            "id": "c0b817cb-453c-479c-b04e-34206da497d7"
+                            "id": "83e7042c-9114-4e9b-9030-26eb2d453ef1"
                         }
                     ],
                     "startScript": [
@@ -4431,6 +4433,35 @@
                                 "palette": "dmg"
                             },
                             "id": "e751440f-a7f8-476d-bdf6-55811e9cb043"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "13",
+                                "__collapseElse": false,
+                                "__collapse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SHOW",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "f83e1780-0374-442c-bd96-6c4402d6dc51"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "1d1bd259-914c-4d07-8300-9c914873c353"
+                                    }
+                                ]
+                            },
+                            "id": "7c72bf48-2522-43e2-83cb-6aa282f2777c"
                         }
                     ],
                     "updateScript": [],
@@ -4545,8 +4576,10 @@
                                                                 "command": "EVENT_TEXT",
                                                                 "args": {
                                                                     "text": [
-                                                                        "*sniff sniff*\noh gross it's you.",
-                                                                        "are you going to\ngo take the bus?"
+                                                                        "*sniff sniff*\n",
+                                                                        "Oh gross it's you.",
+                                                                        "Are you going to\ngo take the bus?",
+                                                                        "There's some work\nthat needs to be \ndone at Kangapost."
                                                                     ],
                                                                     "avatarId": ""
                                                                 },
@@ -16951,7 +16984,7 @@
         },
         {
             "id": "6a17e975-309a-43d7-b596-b2ef0c2eb060__L0",
-            "name": "Local 0"
+            "name": "tutorialSeen"
         },
         {
             "id": "8fc2b52a-35cd-4f91-b6c3-baf97fd2e27a__L0",
@@ -16969,16 +17002,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "36e7cc1d-01c5-4cc1-9abc-720bd7e298ae",
-        "startX": 12,
-        "startY": 15,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 189,
-        "worldScrollY": 42,
+        "worldScrollY": 0,
         "zoom": 125,
         "customColorsEnabled": true,
         "sgbEnabled": false,

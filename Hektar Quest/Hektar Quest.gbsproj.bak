@@ -2626,7 +2626,7 @@
                                         "args": {
                                             "sceneId": "36e7cc1d-01c5-4cc1-9abc-720bd7e298ae",
                                             "x": 3,
-                                            "y": 13,
+                                            "y": 14,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -3328,7 +3328,7 @@
             "autoFadeSpeed": 1,
             "id": "6a17e975-309a-43d7-b596-b2ef0c2eb060",
             "x": 1346.0888888888892,
-            "y": 52.22222222222222,
+            "y": 51.422222222222224,
             "actors": [],
             "triggers": [
                 {
@@ -3423,12 +3423,11 @@
                                 "args": {
                                     "__scriptTabs": "text",
                                     "text": [
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press Z)",
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press A)",
                                         "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I haven't had\na day off in\nforever!",
                                         "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Suppose it's \ntime to get \nout of bed.\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I can walk\nwith WASD or\nthe arrow \nkeys.!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I can interact\nwith the 'Z'\nkey and cancel\nwith 'X'!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!DPAD - Walk\nA - Interact\nB - Cancel\nSTART - Menu!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
                                     ],
                                     "nameTag": "Hektar",
                                     "nameX": 2,
@@ -3440,7 +3439,7 @@
                                     "avatarWidth": 4,
                                     "orientation": "left",
                                     "__collapse": false,
-                                    "__comment": true
+                                    "__comment": false
                                 },
                                 "id": "b735b9fd-eac6-4fb3-aabb-b670900bb01b"
                             }
@@ -4336,7 +4335,7 @@
                                         "args": {
                                             "sceneId": "b7b91980-33b4-4ef6-a9ee-cd94da24ba9c",
                                             "x": 1,
-                                            "y": 42,
+                                            "y": 43,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -4393,12 +4392,20 @@
                     "animSpeed": 15,
                     "paletteId": "",
                     "isPinned": false,
-                    "script": [
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_PALETTE_SET_EMOTE",
+                            "args": {
+                                "palette": "dmg"
+                            },
+                            "id": "e751440f-a7f8-476d-bdf6-55811e9cb043"
+                        },
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "13",
-                                "__collapseElse": true,
+                                "__collapseElse": false,
                                 "__collapse": false
                             },
                             "children": {
@@ -4408,7 +4415,7 @@
                                         "args": {
                                             "actorId": "$self$"
                                         },
-                                        "id": "1abb7e74-b62a-486f-9223-3f8250a6b25a"
+                                        "id": "f83e1780-0374-442c-bd96-6c4402d6dc51"
                                     }
                                 ],
                                 "false": [
@@ -4417,20 +4424,11 @@
                                         "args": {
                                             "actorId": "$self$"
                                         },
-                                        "id": "b9a8f6a5-0936-4fae-817c-57e696196f58"
+                                        "id": "1d1bd259-914c-4d07-8300-9c914873c353"
                                     }
                                 ]
                             },
-                            "id": "c0b817cb-453c-479c-b04e-34206da497d7"
-                        }
-                    ],
-                    "startScript": [
-                        {
-                            "command": "EVENT_PALETTE_SET_EMOTE",
-                            "args": {
-                                "palette": "dmg"
-                            },
-                            "id": "e751440f-a7f8-476d-bdf6-55811e9cb043"
+                            "id": "7c72bf48-2522-43e2-83cb-6aa282f2777c"
                         }
                     ],
                     "updateScript": [],
@@ -16969,15 +16967,15 @@
         }
     ],
     "settings": {
-        "startSceneId": "97d20e4a-ff98-4fbf-9bbb-1ce22881d4ef",
-        "startX": 4,
-        "startY": 9,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
+        "worldScrollX": 189,
         "worldScrollY": 0,
         "zoom": 125,
         "customColorsEnabled": true,
