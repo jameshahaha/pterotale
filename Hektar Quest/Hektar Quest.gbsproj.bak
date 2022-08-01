@@ -3414,34 +3414,56 @@
                             {
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
-                                    "variable": "13"
+                                    "variable": "13",
+                                    "__collapse": true
                                 },
                                 "id": "4b092c4f-e86c-4c38-8558-a3f76e03b3f8"
                             },
                             {
-                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "command": "EVENT_IF_FALSE",
                                 "args": {
-                                    "__scriptTabs": "text",
-                                    "text": [
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press A)",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I haven't had\na day off in\nforever!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Suppose it's \ntime to get \nout of bed.\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
-                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!DPAD - Walk\nA - Interact\nB - Cancel\nSTART - Menu!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
-                                    ],
-                                    "nameTag": "Hektar",
-                                    "nameX": 2,
-                                    "avatarType": "large",
-                                    "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
-                                    "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
-                                    "avatarX": 2,
-                                    "avatarY": 2,
-                                    "avatarWidth": 4,
-                                    "orientation": "left",
-                                    "__collapse": false,
-                                    "__comment": false
+                                    "variable": "L0",
+                                    "__collapseElse": true,
+                                    "__collapse": false
                                 },
-                                "id": "b735b9fd-eac6-4fb3-aabb-b670900bb01b"
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...*yawn*...\n\n(press A)",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I haven't had\na day off in\nforever!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Suppose it's \ntime to get \nout of bed.\n!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Oh right,\nalmost forgot!!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!DPAD - Walk\nA - Interact\nB - Cancel\nSTART - Menu!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
+                                                ],
+                                                "nameTag": "Hektar",
+                                                "nameX": 2,
+                                                "avatarType": "large",
+                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 4,
+                                                "orientation": "left",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            },
+                                            "id": "b735b9fd-eac6-4fb3-aabb-b670900bb01b"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "L0"
+                                            },
+                                            "id": "5f748afb-4731-45d4-bcd2-40f2687cfa55"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "c7470e3d-3e19-401a-bdfc-1c4880f8df09"
                             }
                         ],
                         "false": []
@@ -4392,7 +4414,18 @@
                     "animSpeed": 15,
                     "paletteId": "",
                     "isPinned": false,
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Get lost! \nGo to Kangapost!!"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "83e7042c-9114-4e9b-9030-26eb2d453ef1"
+                        }
+                    ],
                     "startScript": [
                         {
                             "command": "EVENT_PALETTE_SET_EMOTE",
@@ -4543,8 +4576,10 @@
                                                                 "command": "EVENT_TEXT",
                                                                 "args": {
                                                                     "text": [
-                                                                        "*sniff sniff*\noh gross it's you.",
-                                                                        "are you going to\ngo take the bus?"
+                                                                        "*sniff sniff*\n",
+                                                                        "Oh gross it's you.",
+                                                                        "Are you going to\ngo take the bus?",
+                                                                        "There's some work\nthat needs to be \ndone at Kangapost."
                                                                     ],
                                                                     "avatarId": ""
                                                                 },
@@ -16949,7 +16984,7 @@
         },
         {
             "id": "6a17e975-309a-43d7-b596-b2ef0c2eb060__L0",
-            "name": "Local 0"
+            "name": "tutorialSeen"
         },
         {
             "id": "8fc2b52a-35cd-4f91-b6c3-baf97fd2e27a__L0",
