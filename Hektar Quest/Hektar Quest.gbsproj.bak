@@ -7535,7 +7535,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "Neighbourhood",
+            "name": "Central Park",
             "backgroundId": "a6d5f573-9357-4d6f-9dfe-b0c82e58be18",
             "width": 37,
             "height": 30,
@@ -8693,7 +8693,7 @@
                                         "args": {
                                             "variable": "14",
                                             "__collapseElse": false,
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "children": {
                                             "true": [
@@ -8701,8 +8701,8 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "My friend Ponyo is\nlost...!",
-                                                            "Could you help me\ngo around town and\nfind him?!"
+                                                            "Murp.. I can't\nfind my best\nfriend Ponyo...",
+                                                            "Do you have time \nto help me find\nhim?"
                                                         ],
                                                         "avatarId": "",
                                                         "__collapse": false
@@ -8739,6 +8739,9 @@
                                                                 "command": "EVENT_TEXT",
                                                                 "args": {
                                                                     "text": [
+                                                                        "I was taking him\non a walk in the \nforest nearby",
+                                                                        "and got distracted\nby some cute \nmushrooms... ",
+                                                                        "I hope Ryan\ndoesn't get mad at\nme...",
                                                                         "Active quest list\nhas been updated."
                                                                     ],
                                                                     "avatarId": ""
@@ -8749,6 +8752,16 @@
                                                         "false": []
                                                     },
                                                     "id": "9008e239-166e-4bf1-8a85-5138f878cb86"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "No worries...\nI hope I can find\nPonyo..."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "b8818d35-bfbd-471b-9206-5cc491e9ff72"
                                                 }
                                             ],
                                             "false": []
@@ -13139,6 +13152,28 @@
                         }
                     ],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "a345a331-3a8c-4523-a3f0-47b7ab681047",
+                    "x": 16,
+                    "y": 0,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
+                                "x": 13,
+                                "y": 21,
+                                "direction": "up",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "895e7d4f-a35c-47ba-b56f-3ed27c50a1e4"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [],
@@ -14010,7 +14045,30 @@
             "x": 234.2857142857143,
             "y": 289.71428571428567,
             "actors": [],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "23c9946b-15de-464f-ae1d-2c6c6c492d0f",
+                    "x": 12,
+                    "y": 23,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "a8021669-bd73-4f53-a4cd-19038a0f9684",
+                                "x": 17,
+                                "y": 2,
+                                "direction": "down",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "8a09c5e4-dea5-4f29-bbc6-aa79c4be5e71"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [],
             "playerHit1Script": [],
             "playerHit2Script": [],
@@ -30712,17 +30770,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
-        "startX": 13,
-        "startY": 18,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 613,
-        "worldScrollY": 893,
-        "zoom": 275,
+        "worldScrollX": 1114,
+        "worldScrollY": 2234,
+        "zoom": 225,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

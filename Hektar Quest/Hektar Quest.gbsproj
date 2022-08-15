@@ -6048,6 +6048,29 @@
                                             "false": []
                                         },
                                         "id": "c8904dd5-41c6-4f46-88b9-aca67d7c88bf"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_FALSE",
+                                        "args": {
+                                            "variable": "15",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "There's a request\nfrom Reem!S"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "6a743227-7572-4f55-985c-c98f52d5057b"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "80a92194-a4b6-4747-bd29-bfbb3fee38a6"
                                     }
                                 ],
                                 "false": []
@@ -7469,8 +7492,8 @@
             ],
             "autoFadeSpeed": 1,
             "id": "32831725-dfaf-4234-8452-23f1753b02f7",
-            "x": 832,
-            "y": 993,
+            "x": 832.8888888888889,
+            "y": 998.3333333333335,
             "actors": [],
             "triggers": [
                 {
@@ -7535,7 +7558,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "Neighbourhood",
+            "name": "Central Park",
             "backgroundId": "a6d5f573-9357-4d6f-9dfe-b0c82e58be18",
             "width": 37,
             "height": 30,
@@ -8693,7 +8716,7 @@
                                         "args": {
                                             "variable": "14",
                                             "__collapseElse": false,
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "children": {
                                             "true": [
@@ -8701,8 +8724,8 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "My friend Ponyo is\nlost...!",
-                                                            "Could you help me\ngo around town and\nfind him?!"
+                                                            "Murp.. I can't\nfind my best\nfriend Ponyo...",
+                                                            "Do you have time \nto help me find\nhim?"
                                                         ],
                                                         "avatarId": "",
                                                         "__collapse": false
@@ -8739,6 +8762,9 @@
                                                                 "command": "EVENT_TEXT",
                                                                 "args": {
                                                                     "text": [
+                                                                        "I was taking him\non a walk in the \nforest nearby",
+                                                                        "and got distracted\nby some cute \nmushrooms... ",
+                                                                        "I hope Ryan\ndoesn't get mad at\nme...",
                                                                         "Active quest list\nhas been updated."
                                                                     ],
                                                                     "avatarId": ""
@@ -8749,6 +8775,16 @@
                                                         "false": []
                                                     },
                                                     "id": "9008e239-166e-4bf1-8a85-5138f878cb86"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "No worries...\nI hope I can find\nPonyo..."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "b8818d35-bfbd-471b-9206-5cc491e9ff72"
                                                 }
                                             ],
                                             "false": []
@@ -9021,132 +9057,6 @@
                     "id": "0c0e0908-9e82-4e99-9170-c0908756fc68",
                     "x": 13,
                     "y": 5
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6ed6b0b6-d8d3-4260-99ef-61420653d0d4",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "r..UFF ruff..RuFf\n(idk where i am)",
-                                    "Pick up the lost\ndog?"
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "95ad54a3-79ac-4783-acba-321f7f3b6d09"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "0",
-                                "trueText": "Yes",
-                                "falseText": "No"
-                            },
-                            "id": "2e835dd5-7f96-4bad-b1af-c6ec7ce3d608"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "1"
-                                        },
-                                        "id": "1f763832-b898-4d29-952c-f5200e30164f"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "cffa9947-2596-453b-ab26-78c221ec8fe9"
-                        }
-                    ],
-                    "startScript": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "14",
-                                "__collapseElse": false,
-                                "__collapse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_IF_FALSE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapseElse": true
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_ACTOR_SHOW",
-                                                    "args": {
-                                                        "actorId": "$self$"
-                                                    },
-                                                    "id": "c5c15373-7a91-4249-93b6-e7c95d423bbb"
-                                                }
-                                            ],
-                                            "false": []
-                                        },
-                                        "id": "abfb2b83-2596-438c-b424-031bc802eae3"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_ACTOR_HIDE",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        },
-                                        "id": "cbc08934-0239-4fe4-bfec-268057f7dcb2"
-                                    }
-                                ]
-                            },
-                            "id": "44106eb1-4872-45be-96e0-53e3596a22b9"
-                        }
-                    ],
-                    "updateScript": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_HIDE",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        },
-                                        "id": "af00664e-9e82-4af7-bec6-c27821ee3a77"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "4026309a-897b-4fb6-89c0-16ae57ce4d63"
-                        }
-                    ],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "8630ecd9-8585-48fb-a2b1-b9905093021a",
-                    "x": 8,
-                    "y": 15
                 }
             ],
             "triggers": [
@@ -13116,7 +13026,134 @@
             "id": "a8021669-bd73-4f53-a4cd-19038a0f9684",
             "x": 240.8,
             "y": 533.9636363636364,
-            "actors": [],
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "6ed6b0b6-d8d3-4260-99ef-61420653d0d4",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "r..UFF ruff..RuFf\n(idk where i am)",
+                                    "Pick up the lost\ndog?"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "95ad54a3-79ac-4783-acba-321f7f3b6d09"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "0",
+                                "trueText": "Yes",
+                                "falseText": "No"
+                            },
+                            "id": "2e835dd5-7f96-4bad-b1af-c6ec7ce3d608"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "1"
+                                        },
+                                        "id": "1f763832-b898-4d29-952c-f5200e30164f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "cffa9947-2596-453b-ab26-78c221ec8fe9"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "14",
+                                "__collapseElse": false,
+                                "__collapse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_IF_FALSE",
+                                        "args": {
+                                            "variable": "0",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_ACTOR_SHOW",
+                                                    "args": {
+                                                        "actorId": "$self$"
+                                                    },
+                                                    "id": "c5c15373-7a91-4249-93b6-e7c95d423bbb"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "abfb2b83-2596-438c-b424-031bc802eae3"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "cbc08934-0239-4fe4-bfec-268057f7dcb2"
+                                    }
+                                ]
+                            },
+                            "id": "44106eb1-4872-45be-96e0-53e3596a22b9"
+                        }
+                    ],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "af00664e-9e82-4af7-bec6-c27821ee3a77"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "4026309a-897b-4fb6-89c0-16ae57ce4d63"
+                        }
+                    ],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "8630ecd9-8585-48fb-a2b1-b9905093021a",
+                    "x": 4,
+                    "y": 4
+                }
+            ],
             "triggers": [
                 {
                     "name": "",
@@ -30765,9 +30802,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 3,
-        "zoom": 75,
+        "worldScrollX": 869,
+        "worldScrollY": 2836,
+        "zoom": 225,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
