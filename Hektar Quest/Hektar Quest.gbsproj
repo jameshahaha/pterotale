@@ -830,10 +830,10 @@
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
-                        "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+                        "musicId": "d86acf68-6951-45f4-967f-1ed850e2b67d",
                         "loop": true
                     },
-                    "id": "f254d9e2-e762-43e0-9e96-db6174287cd6"
+                    "id": "61752944-60ac-4b75-9949-19416bc3f00b"
                 },
                 {
                     "command": "EVENT_RNG_SEED",
@@ -931,6 +931,11 @@
                                             },
                                             "children": {
                                                 "true": [
+                                                    {
+                                                        "command": "EVENT_MUSIC_STOP",
+                                                        "args": {},
+                                                        "id": "8ad30b61-5c58-46c0-b51a-55c8d067ac6d"
+                                                    },
                                                     {
                                                         "id": "4a922761-48a9-410d-b603-00e7a7dd91ea",
                                                         "command": "EVENT_LOAD_DATA",
@@ -4057,6 +4062,20 @@
                     },
                     "children": {
                         "true": [
+                            {
+                                "command": "EVENT_MUSIC_STOP",
+                                "args": {},
+                                "id": "d2d11eda-c6cd-4b9c-a36a-b39b87fd1cc4"
+                            },
+                            {
+                                "command": "EVENT_MUSIC_PLAY",
+                                "args": {
+                                    "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+                                    "loop": true,
+                                    "__comment": true
+                                },
+                                "id": "46504e01-2769-4a1e-8333-cd2e72ddda06"
+                            },
                             {
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
@@ -35363,6 +35382,13 @@
             "type": "uge"
         },
         {
+            "id": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+            "name": "main_track",
+            "filename": "main_track.uge",
+            "settings": {},
+            "type": "uge"
+        },
+        {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
@@ -35375,20 +35401,6 @@
             "id": "14d7162f-cc7f-4a48-8b56-7932b5ab486e",
             "name": "template",
             "filename": "template.uge",
-            "settings": {},
-            "type": "uge"
-        },
-        {
-            "id": "8a4f3207-7e78-4b31-bd0f-cf5c6e8a58a2",
-            "name": "town_track",
-            "filename": "town_track.uge",
-            "settings": {},
-            "type": "uge"
-        },
-        {
-            "id": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
-            "name": "town_track2",
-            "filename": "town_track2.uge",
             "settings": {},
             "type": "uge"
         }
@@ -35761,9 +35773,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 48,
-        "worldScrollY": 0,
-        "zoom": 50,
+        "worldScrollX": 190,
+        "worldScrollY": 670,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

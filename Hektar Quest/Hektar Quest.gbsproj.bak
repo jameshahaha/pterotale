@@ -828,6 +828,14 @@
                     }
                 },
                 {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "d86acf68-6951-45f4-967f-1ed850e2b67d",
+                        "loop": true
+                    },
+                    "id": "61752944-60ac-4b75-9949-19416bc3f00b"
+                },
+                {
                     "command": "EVENT_RNG_SEED",
                     "args": {
                         "__collapse": true
@@ -838,7 +846,7 @@
                     "id": "19a94599-0006-4e3f-9049-c5087d230ed8",
                     "command": "EVENT_LOOP",
                     "args": {
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -923,6 +931,11 @@
                                             },
                                             "children": {
                                                 "true": [
+                                                    {
+                                                        "command": "EVENT_MUSIC_STOP",
+                                                        "args": {},
+                                                        "id": "8ad30b61-5c58-46c0-b51a-55c8d067ac6d"
+                                                    },
                                                     {
                                                         "id": "4a922761-48a9-410d-b603-00e7a7dd91ea",
                                                         "command": "EVENT_LOAD_DATA",
@@ -4049,6 +4062,19 @@
                     },
                     "children": {
                         "true": [
+                            {
+                                "command": "EVENT_MUSIC_STOP",
+                                "args": {},
+                                "id": "d2d11eda-c6cd-4b9c-a36a-b39b87fd1cc4"
+                            },
+                            {
+                                "command": "EVENT_MUSIC_PLAY",
+                                "args": {
+                                    "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+                                    "loop": true
+                                },
+                                "id": "46504e01-2769-4a1e-8333-cd2e72ddda06"
+                            },
                             {
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
@@ -10057,7 +10083,7 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "autoFadeEventCollapse": true
+            "autoFadeEventCollapse": false
         },
         {
             "name": "Inventory",
@@ -35334,9 +35360,30 @@
     ],
     "music": [
         {
+            "id": "19a3141a-f16a-48c3-8b56-905def016979",
+            "name": "Crystal Clear",
+            "filename": "Crystal Clear.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
             "id": "e2eb6dec-2800-4df9-a6c9-214f42e6b070",
             "name": "Rulz_GonaSpace",
             "filename": "Rulz_GonaSpace.uge",
+            "settings": {},
+            "type": "uge"
+        },
+        {
+            "id": "d86acf68-6951-45f4-967f-1ed850e2b67d",
+            "name": "crystal_clear",
+            "filename": "crystal_clear.uge",
+            "settings": {},
+            "type": "uge"
+        },
+        {
+            "id": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+            "name": "main_track",
+            "filename": "main_track.uge",
             "settings": {},
             "type": "uge"
         },
@@ -35717,17 +35764,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "e39ece3b-a6c8-435d-87f8-b41540da7e43",
-        "startX": 13,
-        "startY": 21,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 12,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1776,
-        "worldScrollY": 2745,
-        "zoom": 200,
+        "worldScrollX": 386,
+        "worldScrollY": 0,
+        "zoom": 50,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
