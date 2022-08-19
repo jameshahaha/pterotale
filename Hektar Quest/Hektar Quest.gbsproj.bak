@@ -9684,8 +9684,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "18ca02b8-7211-449a-bbfb-0467d7c394e4",
-                    "x": 3,
-                    "y": 7
+                    "x": 13,
+                    "y": 18
                 },
                 {
                     "name": "",
@@ -9725,8 +9725,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "0cb1e071-84e7-4d5f-a4c1-cda48a2f2f07",
-                    "x": 3,
-                    "y": 5
+                    "x": 13,
+                    "y": 16
                 },
                 {
                     "name": "",
@@ -11030,27 +11030,6 @@
                     "id": "fa409250-dd02-415f-8696-1e5c5cfadf23",
                     "x": 10,
                     "y": 7
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "5a40b022-700b-4546-8a5a-8adae9b6c2f6",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "13ec52fb-2c94-4aea-81f1-dd05eb2aeff7",
-                    "x": 1,
-                    "y": 14
                 },
                 {
                     "name": "",
@@ -35739,15 +35718,15 @@
     ],
     "settings": {
         "startSceneId": "e39ece3b-a6c8-435d-87f8-b41540da7e43",
-        "startX": 3,
-        "startY": 9,
+        "startX": 13,
+        "startY": 21,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1231,
-        "worldScrollY": 2272,
+        "worldScrollX": 1776,
+        "worldScrollY": 2745,
         "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
