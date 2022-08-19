@@ -8931,6 +8931,16 @@
                                                                 "id": "ea64493f-0908-46b0-acee-fba9e2c58b9b"
                                                             },
                                                             {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Obtained Wally's\nCamera Shop Coupon"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "1e2e7039-c232-461f-9900-45487b4142c3"
+                                                            },
+                                                            {
                                                                 "command": "EVENT_SET_FALSE",
                                                                 "args": {
                                                                     "variable": "20"
@@ -17589,6 +17599,15 @@
                 1,
                 1
             ]
+        },
+        {
+            "id": "5ecd01f5-1b04-4a06-a8cb-794a063082d1",
+            "name": "Kanga Corner",
+            "width": 30,
+            "height": 39,
+            "imageWidth": 240,
+            "imageHeight": 312,
+            "filename": "Kanga Corner.png"
         },
         {
             "id": "d25a27b5-06ea-4841-883b-6c2d2aade77a",
@@ -31044,9 +31063,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 303,
-        "worldScrollY": 1028,
-        "zoom": 125,
+        "worldScrollX": 1009,
+        "worldScrollY": 2608,
+        "zoom": 275,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
