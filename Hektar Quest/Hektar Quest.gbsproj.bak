@@ -438,7 +438,7 @@
             "id": "4912bee2-387a-472f-ae4f-6679b6149517",
             "name": "Title Screen",
             "backgroundId": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
-            "x": 1568,
+            "x": 1569,
             "y": 717,
             "width": 20,
             "height": 18,
@@ -937,11 +937,36 @@
                                                         "id": "8ad30b61-5c58-46c0-b51a-55c8d067ac6d"
                                                     },
                                                     {
+                                                        "command": "EVENT_SET_FALSE",
+                                                        "args": {
+                                                            "variable": "26"
+                                                        },
+                                                        "id": "750f5bf0-a887-47c1-a214-3e3f286fa628"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_MUSIC_PLAY",
+                                                        "args": {
+                                                            "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+                                                            "loop": true,
+                                                            "__comment": false
+                                                        },
+                                                        "id": "e33288cd-9152-4094-bc54-4fa9284b849a"
+                                                    },
+                                                    {
                                                         "id": "4a922761-48a9-410d-b603-00e7a7dd91ea",
                                                         "command": "EVENT_LOAD_DATA",
                                                         "args": {
                                                             "saveSlot": 0
                                                         }
+                                                    },
+                                                    {
+                                                        "command": "EVENT_MUSIC_PLAY",
+                                                        "args": {
+                                                            "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
+                                                            "loop": true,
+                                                            "__comment": false
+                                                        },
+                                                        "id": "45c745c1-87db-4918-a010-27ad1d0d2d0c"
                                                     }
                                                 ],
                                                 "false": [
@@ -4013,8 +4038,8 @@
             ],
             "autoFadeSpeed": 1,
             "id": "6a17e975-309a-43d7-b596-b2ef0c2eb060",
-            "x": 2283.8388888888894,
-            "y": 993.4222222222222,
+            "x": 2284.8388888888894,
+            "y": 994.4222222222222,
             "actors": [],
             "triggers": [
                 {
@@ -4135,7 +4160,7 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "10",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__collapseElse": true
                     },
                     "children": {
@@ -4150,9 +4175,9 @@
                                 "args": {
                                     "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
                                     "loop": true,
-                                    "__comment": true
+                                    "__comment": false
                                 },
-                                "id": "46504e01-2769-4a1e-8333-cd2e72ddda06"
+                                "id": "2382f50d-e688-46f4-99bf-81efc56dd65d"
                             },
                             {
                                 "command": "EVENT_SET_TRUE",
@@ -36199,8 +36224,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1146,
-        "worldScrollY": 301,
+        "worldScrollX": 1145,
+        "worldScrollY": 364,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
