@@ -1123,35 +1123,18 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "id": "08ef105d-adbb-4454-9ce8-22e82860051f",
-                                                        "command": "EVENT_SCENE_POP_STATE",
+                                                        "command": "EVENT_SET_TRUE",
                                                         "args": {
-                                                            "fadeSpeed": 1,
-                                                            "__comment": false,
-                                                            "__collapse": false
-                                                        }
+                                                            "variable": "26"
+                                                        },
+                                                        "id": "9ecd1306-9459-4d4c-9eb4-f0c532ff8d44"
                                                     },
                                                     {
-                                                        "command": "EVENT_SAVE_DATA",
+                                                        "command": "EVENT_SCENE_POP_STATE",
                                                         "args": {
-                                                            "saveSlot": 0,
-                                                            "__scriptTabs": "save"
+                                                            "fadeSpeed": 1
                                                         },
-                                                        "children": {
-                                                            "true": [
-                                                                {
-                                                                    "command": "EVENT_TEXT",
-                                                                    "args": {
-                                                                        "text": [
-                                                                            "The game has been\nsaved."
-                                                                        ],
-                                                                        "avatarId": ""
-                                                                    },
-                                                                    "id": "35ca6a31-1764-4541-96be-9f1742d582fa"
-                                                                }
-                                                            ]
-                                                        },
-                                                        "id": "d251d2ea-c38a-421c-ab09-6af7265d8710"
+                                                        "id": "09cafcc9-b6bb-4290-b880-b4737f1324d0"
                                                     }
                                                 ],
                                                 "false": []
@@ -3402,6 +3385,42 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "6c8737c9-dd83-4eb0-bfbb-4aa36a2ab3de"
+                                        }
+                                    ]
+                                },
+                                "id": "1051caaa-7e55-446b-b27a-35b0966bca97"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "787d6387-c773-41cd-af33-d05ad7526898"
+                },
+                {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": [
@@ -4016,6 +4035,49 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_PALETTE_SET_UI",
+                    "args": {
+                        "palette": ""
+                    },
+                    "id": "a74fd249-e615-4942-8d16-4018dc923740"
+                },
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "3b117679-0ef1-4933-a7eb-29169aeb249e"
+                                        }
+                                    ]
+                                },
+                                "id": "f4911f95-142c-406b-9a5d-371b94fb2dcd"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "87d08fb2-5243-4be6-9d77-a745f54a7d73"
+                },
+                {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": [
@@ -4048,13 +4110,6 @@
                     "id": "cb719765-aca0-4330-b716-cb699c366ccf"
                 },
                 {
-                    "command": "EVENT_PALETTE_SET_UI",
-                    "args": {
-                        "palette": "default-ui"
-                    },
-                    "id": "32defa2a-0c55-47e2-92f0-5a8662120452"
-                },
-                {
                     "command": "EVENT_FADE_IN",
                     "args": {
                         "speed": 1
@@ -4066,7 +4121,7 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "10",
-                        "__collapse": false,
+                        "__collapse": true,
                         "__collapseElse": true
                     },
                     "children": {
@@ -5396,6 +5451,42 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "ae9f5e9b-889a-4d2e-8e47-fbca563b95d2"
+                                        }
+                                    ]
+                                },
+                                "id": "88eaabbb-f2f5-4f09-874d-cb29c833abfb"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "ae416fe5-c091-4a8f-be16-24587dc5c381"
+                },
+                {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": [
@@ -6680,6 +6771,42 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "07ba734f-d6ff-4878-916a-6c62f9c43aca"
+                                        }
+                                    ]
+                                },
+                                "id": "d5cf6997-0f28-46f1-b265-cfeb8431501d"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "8b659616-5fc5-4184-b324-5c15d1153540"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -8280,6 +8407,42 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "fc6c7448-2a17-48cb-a397-364d1d593107"
+                                        }
+                                    ]
+                                },
+                                "id": "195336ef-ee3b-4ebb-8e47-92f28396143a"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "540f00a1-5022-4eff-85c2-a9d41340cd13"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -10058,6 +10221,78 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "db957ec5-c38a-4781-a8bd-87c6e224f9d4"
+                                        }
+                                    ]
+                                },
+                                "id": "bc779e17-d186-48d4-8c9d-cb76378140d0"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "8b963a8b-6621-41bc-83b6-c655e05a108c"
+                },
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "c51a5002-54fe-4dfb-be81-62fd8e0c31d7"
+                                        }
+                                    ]
+                                },
+                                "id": "00983604-039c-4c82-bb8a-70b19c1c9c4d"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "1a4e90b6-6e02-4371-a0a1-a02a31bf37f5"
+                },
+                {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": [
@@ -10065,7 +10300,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -10093,7 +10328,7 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "autoFadeEventCollapse": false
+            "autoFadeEventCollapse": true
         },
         {
             "name": "Inventory",
@@ -13228,7 +13463,7 @@
             "autoFadeSpeed": 1,
             "id": "1e9c4502-d7a1-44a0-a8e9-1cfacedd0f70",
             "x": 514.6666666666665,
-            "y": 782,
+            "y": 780,
             "actors": [],
             "triggers": [
                 {
@@ -13277,6 +13512,42 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "1e521d4b-52d2-44fa-bc06-6c2115aa77be"
+                                        }
+                                    ]
+                                },
+                                "id": "4762700e-30ce-45c3-a24f-d481583471a9"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "886064e3-1407-4afd-a613-1a2cc9d68222"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -13846,6 +14117,42 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "d0e548a2-ed3b-4cca-b0d7-a0be209fa94f"
+                                        }
+                                    ]
+                                },
+                                "id": "4581c41c-b581-465e-b9eb-9857ba0087d1"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "d5345574-5569-47ac-85a3-47cb5222ef52"
+                },
+                {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": [
@@ -13853,7 +14160,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -14712,6 +15019,42 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "79650ed8-05bc-405b-bea4-8b4d7f8d64a9"
+                                        }
+                                    ]
+                                },
+                                "id": "e7ed7f0d-34d8-4b03-b757-9f8c9e29cd17"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "cc1136fb-f60c-4aa1-90e9-080821923780"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -15638,6 +15981,42 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "26",
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SAVE_DATA",
+                                "args": {
+                                    "saveSlot": 0,
+                                    "__scriptTabs": "save"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "The game has been\nsaved."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "6e1d282b-d3ff-4a0d-9d15-7c1f5cfeb3bf"
+                                        }
+                                    ]
+                                },
+                                "id": "a8009209-71df-4774-aca3-2cbf770bb0d7"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "2d4b3ef5-5e46-4cdb-bce2-d10f7be42217"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -35765,6 +36144,10 @@
         {
             "id": "fd223a5f-7148-4705-98a7-b0ef56cb5c74__L0",
             "name": "Save"
+        },
+        {
+            "id": "26",
+            "name": "menuSaved"
         }
     ],
     "engineFieldValues": [
@@ -35782,9 +36165,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 696,
-        "worldScrollY": 1474,
-        "zoom": 150,
+        "worldScrollX": 132,
+        "worldScrollY": 22,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

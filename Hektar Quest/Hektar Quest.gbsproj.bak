@@ -1091,7 +1091,7 @@
                                         "down"
                                     ],
                                     "__collapseElse": true,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -1122,6 +1122,15 @@
                                             },
                                             "children": {
                                                 "true": [
+                                                    {
+                                                        "id": "08ef105d-adbb-4454-9ce8-22e82860051f",
+                                                        "command": "EVENT_SCENE_POP_STATE",
+                                                        "args": {
+                                                            "fadeSpeed": 1,
+                                                            "__comment": false,
+                                                            "__collapse": false
+                                                        }
+                                                    },
                                                     {
                                                         "command": "EVENT_SAVE_DATA",
                                                         "args": {
@@ -35773,9 +35782,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 190,
-        "worldScrollY": 670,
-        "zoom": 100,
+        "worldScrollX": 696,
+        "worldScrollY": 1474,
+        "zoom": 150,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
