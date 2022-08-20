@@ -4071,7 +4071,8 @@
                                 "command": "EVENT_MUSIC_PLAY",
                                 "args": {
                                     "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
-                                    "loop": true
+                                    "loop": true,
+                                    "__comment": true
                                 },
                                 "id": "46504e01-2769-4a1e-8333-cd2e72ddda06"
                             },
@@ -35772,9 +35773,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 386,
-        "worldScrollY": 0,
-        "zoom": 50,
+        "worldScrollX": 190,
+        "worldScrollY": 670,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
