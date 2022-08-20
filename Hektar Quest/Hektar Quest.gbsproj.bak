@@ -3389,7 +3389,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -3401,6 +3401,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "233520ce-9c93-4abe-ba0d-182a617bb6d9"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -4046,7 +4053,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -4058,6 +4065,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "a1012a0c-2fef-43d2-bfc5-8ecb694323ba"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -5455,7 +5469,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -5467,6 +5481,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "ce2fa458-a667-47e6-a145-b78ca7479486"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -6776,7 +6797,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -6788,6 +6809,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "83964e44-c424-4854-9eb6-acd1143445e4"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -8412,7 +8440,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -8424,6 +8452,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "6249642d-60bb-4e77-b9cb-fb32f725ff3c"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -10238,6 +10273,13 @@
                                 "children": {
                                     "true": [
                                         {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "7fca59db-2900-4cb6-a36a-818538a5effa"
+                                        },
+                                        {
                                             "command": "EVENT_TEXT",
                                             "args": {
                                                 "text": [
@@ -10255,42 +10297,6 @@
                         "false": []
                     },
                     "id": "8b963a8b-6621-41bc-83b6-c655e05a108c"
-                },
-                {
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "26",
-                        "__collapseElse": true,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SAVE_DATA",
-                                "args": {
-                                    "saveSlot": 0,
-                                    "__scriptTabs": "save"
-                                },
-                                "children": {
-                                    "true": [
-                                        {
-                                            "command": "EVENT_TEXT",
-                                            "args": {
-                                                "text": [
-                                                    "The game has been\nsaved."
-                                                ],
-                                                "avatarId": ""
-                                            },
-                                            "id": "c51a5002-54fe-4dfb-be81-62fd8e0c31d7"
-                                        }
-                                    ]
-                                },
-                                "id": "00983604-039c-4c82-bb8a-70b19c1c9c4d"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "1a4e90b6-6e02-4371-a0a1-a02a31bf37f5"
                 },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
@@ -13517,7 +13523,7 @@
                     "args": {
                         "variable": "26",
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -13529,6 +13535,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            },
+                                            "id": "530dcc28-3142-4bc1-97cd-6711f9c6c049"
+                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -36186,8 +36199,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 132,
-        "worldScrollY": 23,
+        "worldScrollX": 1146,
+        "worldScrollY": 301,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,

@@ -4135,7 +4135,7 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "10",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__collapseElse": true
                     },
                     "children": {
@@ -4150,7 +4150,7 @@
                                 "args": {
                                     "musicId": "10dafbe7-3d71-4463-b2fe-d6fa2b751a3b",
                                     "loop": true,
-                                    "__comment": true
+                                    "__comment": false
                                 },
                                 "id": "46504e01-2769-4a1e-8333-cd2e72ddda06"
                             },
@@ -36199,8 +36199,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1146,
-        "worldScrollY": 301,
+        "worldScrollX": 1143,
+        "worldScrollY": 303,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
