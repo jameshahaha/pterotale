@@ -19659,7 +19659,7 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "autoFadeEventCollapse": true
+            "autoFadeEventCollapse": false
         },
         {
             "name": "West Bridge",
@@ -24849,8 +24849,8 @@
             ],
             "autoFadeSpeed": 1,
             "id": "31866c7f-2f9d-4e01-9a2d-bbda1fd98d41",
-            "x": 1756.3428571428572,
-            "y": 1314.6285714285707,
+            "x": 1759.009523809524,
+            "y": 1311.073015873015,
             "actors": [
                 {
                     "name": "",
@@ -24882,7 +24882,47 @@
                     "y": 43
                 }
             ],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "9559a317-64bd-4a78-9458-000bd640bd5f",
+                    "x": 30,
+                    "y": 43,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_PALETTE_SET_SPRITE",
+                            "args": {
+                                "palette0": "b93ae2a4-1821-4f77-a3f0-8034fa07075a",
+                                "palette1": "keep",
+                                "palette2": "keep",
+                                "palette3": "keep",
+                                "palette4": "keep",
+                                "palette5": "keep",
+                                "palette6": "keep",
+                                "palette7": "keep"
+                            },
+                            "id": "933ac3f3-3b48-409c-b5ff-afc93d3a69d2"
+                        },
+                        {
+                            "command": "EVENT_PALETTE_SET_BACKGROUND",
+                            "args": {
+                                "palette0": "keep",
+                                "palette1": "d67e4d3a-775c-4727-aec5-f35e9d4c642e",
+                                "palette2": "keep",
+                                "palette3": "keep",
+                                "palette4": "keep",
+                                "palette5": "keep",
+                                "palette6": "keep",
+                                "palette7": "keep"
+                            },
+                            "id": "0828d0f1-dcae-4c2e-a1d4-666b969e4146"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [],
             "playerHit1Script": [],
             "playerHit2Script": [],
@@ -31205,16 +31245,6 @@
                 1,
                 1
             ]
-        },
-        {
-            "id": "5ecd01f5-1b04-4a06-a8cb-794a063082d1",
-            "name": "Kanga Corner",
-            "width": 30,
-            "height": 39,
-            "imageWidth": 240,
-            "imageHeight": 312,
-            "filename": "Kanga Corner.png",
-            "tileColors": []
         },
         {
             "id": "333b735f-7ed0-4ba8-ad45-85397d26f5b7",
@@ -44340,6 +44370,106 @@
     ],
     "spriteSheets": [
         {
+            "id": "f6fe62c7-0f6b-4ac7-ab1b-72a047d49cdd",
+            "name": "Mask",
+            "numFrames": 30,
+            "type": "animated",
+            "filename": "Mask.png",
+            "checksum": "7eb0ec978bcdd3cabb1e7ee437ba424be8ef017a",
+            "width": 480,
+            "height": 432,
+            "states": [
+                {
+                    "id": "018c2913-81a3-41ae-bcae-396514e9a1cd",
+                    "name": "",
+                    "animationType": "multi_movement",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "c7d88515-5ea1-4bbe-9cd1-e00f8728d9cd",
+                            "frames": [
+                                {
+                                    "id": "87ab3ef2-99cd-4e71-af5d-4867f890c78c",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "dd60bb21-73e5-4707-bfec-15a096fb9017",
+                            "frames": [
+                                {
+                                    "id": "2a5d8fd9-e18c-43f4-a710-210881d81fa7",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "cf9fbe87-f474-4a43-a9c2-9e301e865798",
+                            "frames": [
+                                {
+                                    "id": "ddac28ff-10cb-441c-8198-c367cbfffc25",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b03425cb-82ce-4f77-9d35-1660db7a3e5e",
+                            "frames": [
+                                {
+                                    "id": "29070371-503d-43c3-9239-3590c2cc7c2e",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "dca22ba7-dd5c-4286-9454-2a378304d921",
+                            "frames": [
+                                {
+                                    "id": "56713a54-2297-4bfd-baa2-d873c37fb2a1",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4140a541-608a-46f7-abaf-bcba5139282b",
+                            "frames": [
+                                {
+                                    "id": "384fd550-7b16-4d3e-9135-ca7976aca855",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aa12de81-153b-4666-90b9-44d218f90c5c",
+                            "frames": [
+                                {
+                                    "id": "ed554c5f-69be-45b9-8aa9-8144294ba9c9",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "c176dbca-8184-41c4-9cc4-2521f44eb41b",
+                            "frames": [
+                                {
+                                    "id": "dc96cde7-1606-41a1-9590-a90c4673ff3f",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 32,
+            "canvasHeight": 32,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
             "id": "ccd81d53-5690-4d58-ac99-62ce67058edf",
             "name": "Spritesheet",
             "numFrames": 250,
@@ -52817,6 +52947,26 @@
                 "486878",
                 "202850"
             ]
+        },
+        {
+            "id": "d67e4d3a-775c-4727-aec5-f35e9d4c642e",
+            "name": "Lights off - BG",
+            "colors": [
+                "080808",
+                "000000",
+                "000000",
+                "000000"
+            ]
+        },
+        {
+            "id": "b93ae2a4-1821-4f77-a3f0-8034fa07075a",
+            "name": "Lights off - Sprites",
+            "colors": [
+                "484040",
+                "382020",
+                "402008",
+                "000000"
+            ]
         }
     ],
     "customEvents": [
@@ -53308,6 +53458,10 @@
             "name": "currentProduceID"
         },
         {
+            "id": "41",
+            "name": "producePuzzleCompleted"
+        },
+        {
             "id": "e576a447-9dcf-46e5-8dc3-b1431e2e0509__L0",
             "name": "busTravel"
         },
@@ -53370,10 +53524,6 @@
         {
             "id": "b19ca080-d5ec-4ab6-bc4d-c5d9c240a782__L0",
             "name": "refillProduce"
-        },
-        {
-            "id": "41",
-            "name": "producePuzzleCompleted"
         }
     ],
     "engineFieldValues": [
@@ -53383,17 +53533,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "382961a1-e615-4b92-92a7-f1a791b50b7a",
-        "startX": 9,
-        "startY": 14,
+        "startSceneId": "31866c7f-2f9d-4e01-9a2d-bbda1fd98d41",
+        "startX": 23,
+        "startY": 44,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 75,
+        "worldScrollX": 842,
+        "worldScrollY": 524,
+        "zoom": 225,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -53421,9 +53571,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            146,
-            965
+            109,
+            77,
+            514
         ],
         "showNavigator": true,
         "defaultFontId": "26fa15df-3318-44ad-8bfd-feff8ba7991d",
