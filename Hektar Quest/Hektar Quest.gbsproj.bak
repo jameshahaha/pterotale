@@ -2844,14 +2844,16 @@
                         {
                             "command": "EVENT_SET_TRUE",
                             "args": {
-                                "variable": "35"
+                                "variable": "35",
+                                "__comment": true
                             },
                             "id": "d555681f-cc85-4899-885a-4100254eaadb"
                         },
                         {
                             "command": "EVENT_SET_TRUE",
                             "args": {
-                                "variable": "5"
+                                "variable": "5",
+                                "__comment": true
                             },
                             "id": "f4f7a0ad-27b0-425a-8835-90fe9f0f3dd2"
                         },
@@ -28102,14 +28104,16 @@
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "37"
+                        "variable": "37",
+                        "__comment": true
                     },
                     "id": "60608298-8696-4392-b69b-bedb5516dfac"
                 },
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "36"
+                        "variable": "36",
+                        "__comment": true
                     },
                     "id": "d4fb4278-836a-476d-a554-31e8acae0dfe"
                 }
@@ -54478,17 +54482,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "65db0012-7467-4e3a-808d-e4a6c876a61e",
-        "startX": 19,
-        "startY": 21,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 12,
+        "startY": 6,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 820,
-        "worldScrollY": 2212,
-        "zoom": 225,
+        "worldScrollX": 770,
+        "worldScrollY": 2949,
+        "zoom": 325,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
