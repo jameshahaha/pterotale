@@ -1017,6 +1017,11 @@
                     }
                 },
                 {
+                    "command": "EVENT_OVERLAY_HIDE",
+                    "args": {},
+                    "id": "55b199a8-cad1-41e2-9bd3-d7c8e1455473"
+                },
+                {
                     "command": "EVENT_LOOP",
                     "args": {
                         "__collapse": false
@@ -5010,7 +5015,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -30302,7 +30307,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -39137,10 +39142,27 @@
                                                 ],
                                                 "override": true,
                                                 "__scriptTabs": "press",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
-                                                "true": []
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SCENE_PUSH_STATE",
+                                                        "args": {},
+                                                        "id": "5199eda3-28dc-4c7b-ac1c-da589313c5f0"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2"
+                                                        },
+                                                        "id": "1602c313-934b-400a-812f-21f53441eff8"
+                                                    }
+                                                ]
                                             },
                                             "id": "576790ee-8b96-4406-88af-bde626c04c45"
                                         }
@@ -75097,17 +75119,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "7b4c6749-3f8c-41ed-bb6b-547cd04c33fb",
-        "startX": 33,
-        "startY": 32,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 2759,
-        "worldScrollY": 4363,
-        "zoom": 275,
+        "worldScrollX": 266,
+        "worldScrollY": 263,
+        "zoom": 75,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

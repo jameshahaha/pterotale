@@ -5010,7 +5010,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -17296,7 +17296,7 @@
                                                             "operator": "==",
                                                             "comparator": 1,
                                                             "__collapseElse": false,
-                                                            "__collapse": false
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
@@ -17511,14 +17511,213 @@
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_TEXT",
+                                                                    "command": "EVENT_IF_VALUE",
                                                                     "args": {
-                                                                        "text": [
-                                                                            "Item 2"
-                                                                        ],
-                                                                        "avatarId": ""
+                                                                        "variable": "20",
+                                                                        "operator": "==",
+                                                                        "comparator": 1,
+                                                                        "__collapseElse": false,
+                                                                        "__collapse": true
                                                                     },
-                                                                    "id": "30052787-9357-42a9-825b-b4e99d8bbc2e"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "This is Ponyo! He\nprobably wants to \nget home..."
+                                                                                    ],
+                                                                                    "avatarId": ""
+                                                                                },
+                                                                                "id": "08e661b3-4fdf-42a8-9a74-dc3b096c4cfd"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "command": "EVENT_IF_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "20",
+                                                                                    "operator": "==",
+                                                                                    "comparator": 2,
+                                                                                    "__collapseElse": false,
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_TEXT",
+                                                                                            "args": {
+                                                                                                "text": [
+                                                                                                    "A voucher that\ncan be used at\nWally's Shop!"
+                                                                                                ],
+                                                                                                "avatarId": ""
+                                                                                            },
+                                                                                            "id": "a9c83384-c1f1-4b9b-8d2a-40b6083ba70b"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": [
+                                                                                        {
+                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "20",
+                                                                                                "operator": "==",
+                                                                                                "comparator": 3,
+                                                                                                "__collapseElse": false
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_TEXT",
+                                                                                                        "args": {
+                                                                                                            "text": [
+                                                                                                                "A roll of film\nthat might not be\nGold 200...!"
+                                                                                                            ],
+                                                                                                            "avatarId": ""
+                                                                                                        },
+                                                                                                        "id": "1c6d0bbe-0c91-4206-a970-3a9c8344585e"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "false": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                        "args": {
+                                                                                                            "variable": "20",
+                                                                                                            "operator": "==",
+                                                                                                            "comparator": 4,
+                                                                                                            "__collapseElse": false
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                    "args": {
+                                                                                                                        "text": [
+                                                                                                                            "A roll of Gold 200\nthat's super rare!"
+                                                                                                                        ],
+                                                                                                                        "avatarId": ""
+                                                                                                                    },
+                                                                                                                    "id": "449efae1-d76c-4ae8-85c3-29e992ecfac9"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "false": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_IF_VALUE",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "20",
+                                                                                                                        "operator": "==",
+                                                                                                                        "comparator": 5,
+                                                                                                                        "__collapseElse": false
+                                                                                                                    },
+                                                                                                                    "children": {
+                                                                                                                        "true": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                "args": {
+                                                                                                                                    "text": [
+                                                                                                                                        "A 10% discount \nvoucher to be used\nat Wally's Shop."
+                                                                                                                                    ],
+                                                                                                                                    "avatarId": ""
+                                                                                                                                },
+                                                                                                                                "id": "acf41d04-5963-48d8-8992-227dd12e824a"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "false": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_IF_VALUE",
+                                                                                                                                "args": {
+                                                                                                                                    "variable": "20",
+                                                                                                                                    "operator": "==",
+                                                                                                                                    "comparator": 7,
+                                                                                                                                    "__collapseElse": false
+                                                                                                                                },
+                                                                                                                                "children": {
+                                                                                                                                    "true": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_TEXT",
+                                                                                                                                            "args": {
+                                                                                                                                                "text": [
+                                                                                                                                                    "A bundle of fresh\ngreen onions."
+                                                                                                                                                ],
+                                                                                                                                                "avatarId": ""
+                                                                                                                                            },
+                                                                                                                                            "id": "41d53794-d939-47d7-9534-a98592534167"
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "false": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                                                                            "args": {
+                                                                                                                                                "variable": "20",
+                                                                                                                                                "operator": "==",
+                                                                                                                                                "comparator": 8,
+                                                                                                                                                "__collapseElse": false
+                                                                                                                                            },
+                                                                                                                                            "children": {
+                                                                                                                                                "true": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_TEXT",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "text": [
+                                                                                                                                                                "A pair of shiny\nglasses that seem\nto have been lost."
+                                                                                                                                                            ],
+                                                                                                                                                            "avatarId": ""
+                                                                                                                                                        },
+                                                                                                                                                        "id": "aa75dbee-c544-4b6b-95fa-99313616360c"
+                                                                                                                                                    }
+                                                                                                                                                ],
+                                                                                                                                                "false": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "variable": "20",
+                                                                                                                                                            "operator": "==",
+                                                                                                                                                            "comparator": 9,
+                                                                                                                                                            "__collapseElse": false
+                                                                                                                                                        },
+                                                                                                                                                        "children": {
+                                                                                                                                                            "true": [
+                                                                                                                                                                {
+                                                                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                                                                    "args": {
+                                                                                                                                                                        "text": [
+                                                                                                                                                                            "A missing snare\npurchased from\nAssembly Records."
+                                                                                                                                                                        ],
+                                                                                                                                                                        "avatarId": ""
+                                                                                                                                                                    },
+                                                                                                                                                                    "id": "3296d92f-85f5-4188-8110-1bdf2590d5b3"
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "false": []
+                                                                                                                                                        },
+                                                                                                                                                        "id": "ffa3b417-e995-438b-be92-f2d1f95cef51"
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            },
+                                                                                                                                            "id": "79239125-8aa3-45db-9faf-5f55fc74ad60"
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                },
+                                                                                                                                "id": "30acecd0-7fd8-4e91-807e-acdb5f79e10b"
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "id": "02f6e382-fbcd-4c56-b8c9-1886c6da67d3"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        "id": "d9b4dd8e-2f4d-4038-b2ea-e1bf7d7e7d1a"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "0395c891-426c-42b7-94c8-9ed900404100"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "id": "22563a1b-9404-40c9-bc86-4be82989bc6f"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "aa839dc5-f923-4ad6-b4a3-bec85f378084"
                                                                 }
                                                             ],
                                                             "false": [
@@ -17533,14 +17732,213 @@
                                                                     "children": {
                                                                         "true": [
                                                                             {
-                                                                                "command": "EVENT_TEXT",
+                                                                                "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "text": [
-                                                                                        "Item 3"
-                                                                                    ],
-                                                                                    "avatarId": ""
+                                                                                    "variable": "20",
+                                                                                    "operator": "==",
+                                                                                    "comparator": 1,
+                                                                                    "__collapseElse": false,
+                                                                                    "__collapse": true
                                                                                 },
-                                                                                "id": "d447d607-9e9d-4b8b-a334-7322abeb19bf"
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_TEXT",
+                                                                                            "args": {
+                                                                                                "text": [
+                                                                                                    "This is Ponyo! He\nprobably wants to \nget home..."
+                                                                                                ],
+                                                                                                "avatarId": ""
+                                                                                            },
+                                                                                            "id": "124d5720-faa9-4376-aae0-b00590ad290d"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": [
+                                                                                        {
+                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "20",
+                                                                                                "operator": "==",
+                                                                                                "comparator": 2,
+                                                                                                "__collapseElse": false,
+                                                                                                "__collapse": false
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_TEXT",
+                                                                                                        "args": {
+                                                                                                            "text": [
+                                                                                                                "A voucher that\ncan be used at\nWally's Shop!"
+                                                                                                            ],
+                                                                                                            "avatarId": ""
+                                                                                                        },
+                                                                                                        "id": "34981826-0bc4-4bbf-a14a-e684556133cf"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "false": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                        "args": {
+                                                                                                            "variable": "20",
+                                                                                                            "operator": "==",
+                                                                                                            "comparator": 3,
+                                                                                                            "__collapseElse": false
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                    "args": {
+                                                                                                                        "text": [
+                                                                                                                            "A roll of film\nthat might not be\nGold 200...!"
+                                                                                                                        ],
+                                                                                                                        "avatarId": ""
+                                                                                                                    },
+                                                                                                                    "id": "a9c06417-c18d-4a5f-b61b-05de6d88589b"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "false": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_IF_VALUE",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "20",
+                                                                                                                        "operator": "==",
+                                                                                                                        "comparator": 4,
+                                                                                                                        "__collapseElse": false
+                                                                                                                    },
+                                                                                                                    "children": {
+                                                                                                                        "true": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                "args": {
+                                                                                                                                    "text": [
+                                                                                                                                        "A roll of Gold 200\nthat's super rare!"
+                                                                                                                                    ],
+                                                                                                                                    "avatarId": ""
+                                                                                                                                },
+                                                                                                                                "id": "b9c96196-0882-4206-a97f-cc7157cb766c"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "false": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_IF_VALUE",
+                                                                                                                                "args": {
+                                                                                                                                    "variable": "20",
+                                                                                                                                    "operator": "==",
+                                                                                                                                    "comparator": 5,
+                                                                                                                                    "__collapseElse": false
+                                                                                                                                },
+                                                                                                                                "children": {
+                                                                                                                                    "true": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_TEXT",
+                                                                                                                                            "args": {
+                                                                                                                                                "text": [
+                                                                                                                                                    "A 10% discount \nvoucher to be used\nat Wally's Shop."
+                                                                                                                                                ],
+                                                                                                                                                "avatarId": ""
+                                                                                                                                            },
+                                                                                                                                            "id": "52a82a87-b863-4710-838e-136736304a90"
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "false": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                                                                            "args": {
+                                                                                                                                                "variable": "20",
+                                                                                                                                                "operator": "==",
+                                                                                                                                                "comparator": 7,
+                                                                                                                                                "__collapseElse": false
+                                                                                                                                            },
+                                                                                                                                            "children": {
+                                                                                                                                                "true": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_TEXT",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "text": [
+                                                                                                                                                                "A bundle of fresh\ngreen onions."
+                                                                                                                                                            ],
+                                                                                                                                                            "avatarId": ""
+                                                                                                                                                        },
+                                                                                                                                                        "id": "3043e011-fa67-4837-97e9-5d57fdd3ff47"
+                                                                                                                                                    }
+                                                                                                                                                ],
+                                                                                                                                                "false": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "variable": "20",
+                                                                                                                                                            "operator": "==",
+                                                                                                                                                            "comparator": 8,
+                                                                                                                                                            "__collapseElse": false
+                                                                                                                                                        },
+                                                                                                                                                        "children": {
+                                                                                                                                                            "true": [
+                                                                                                                                                                {
+                                                                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                                                                    "args": {
+                                                                                                                                                                        "text": [
+                                                                                                                                                                            "A pair of shiny\nglasses that seem\nto have been lost."
+                                                                                                                                                                        ],
+                                                                                                                                                                        "avatarId": ""
+                                                                                                                                                                    },
+                                                                                                                                                                    "id": "1ea01426-6c25-46be-9760-d7eb74c32bcf"
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "false": [
+                                                                                                                                                                {
+                                                                                                                                                                    "command": "EVENT_IF_VALUE",
+                                                                                                                                                                    "args": {
+                                                                                                                                                                        "variable": "20",
+                                                                                                                                                                        "operator": "==",
+                                                                                                                                                                        "comparator": 9,
+                                                                                                                                                                        "__collapseElse": false
+                                                                                                                                                                    },
+                                                                                                                                                                    "children": {
+                                                                                                                                                                        "true": [
+                                                                                                                                                                            {
+                                                                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                                                                "args": {
+                                                                                                                                                                                    "text": [
+                                                                                                                                                                                        "A missing snare\npurchased from\nAssembly Records."
+                                                                                                                                                                                    ],
+                                                                                                                                                                                    "avatarId": ""
+                                                                                                                                                                                },
+                                                                                                                                                                                "id": "089a31c5-5515-4eb7-8223-7e7ff6a44c82"
+                                                                                                                                                                            }
+                                                                                                                                                                        ],
+                                                                                                                                                                        "false": []
+                                                                                                                                                                    },
+                                                                                                                                                                    "id": "e9489bfc-7b7d-47c0-9401-60a20560668c"
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        },
+                                                                                                                                                        "id": "458a31f4-0dac-4872-b6ea-2fe1800a79c9"
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            },
+                                                                                                                                            "id": "b88153c2-1dd9-482d-8e35-c655e91ad0b0"
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                },
+                                                                                                                                "id": "0b0f0fae-1144-4c42-9b92-4da3738fe44d"
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "id": "328f2daa-0521-47f5-a279-83c23cb8b534"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        "id": "6ca280a2-38f2-4015-a2df-6553dd574619"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "2ee24bc1-b75f-4955-8e94-552c74d9daa0"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "id": "079e9e8b-48d0-43ed-9a3c-d6397cd8e268"
                                                                             }
                                                                         ],
                                                                         "false": [
@@ -17556,14 +17954,213 @@
                                                                                 "children": {
                                                                                     "true": [
                                                                                         {
-                                                                                            "command": "EVENT_TEXT",
+                                                                                            "command": "EVENT_IF_VALUE",
                                                                                             "args": {
-                                                                                                "text": [
-                                                                                                    "Item 4"
-                                                                                                ],
-                                                                                                "avatarId": ""
+                                                                                                "variable": "20",
+                                                                                                "operator": "==",
+                                                                                                "comparator": 1,
+                                                                                                "__collapseElse": false,
+                                                                                                "__collapse": true
                                                                                             },
-                                                                                            "id": "bb304a0a-9c5a-4926-8c5e-b92c2a53cce9"
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_TEXT",
+                                                                                                        "args": {
+                                                                                                            "text": [
+                                                                                                                "This is Ponyo! He\nprobably wants to \nget home..."
+                                                                                                            ],
+                                                                                                            "avatarId": ""
+                                                                                                        },
+                                                                                                        "id": "3514929d-36d9-4641-abd8-2a8ef526ad68"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "false": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                        "args": {
+                                                                                                            "variable": "20",
+                                                                                                            "operator": "==",
+                                                                                                            "comparator": 2,
+                                                                                                            "__collapseElse": false,
+                                                                                                            "__collapse": false
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                    "args": {
+                                                                                                                        "text": [
+                                                                                                                            "A voucher that\ncan be used at\nWally's Shop!"
+                                                                                                                        ],
+                                                                                                                        "avatarId": ""
+                                                                                                                    },
+                                                                                                                    "id": "0a1afc17-bfb8-4dad-83ec-5bfb76454d65"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "false": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_IF_VALUE",
+                                                                                                                    "args": {
+                                                                                                                        "variable": "20",
+                                                                                                                        "operator": "==",
+                                                                                                                        "comparator": 3,
+                                                                                                                        "__collapseElse": false
+                                                                                                                    },
+                                                                                                                    "children": {
+                                                                                                                        "true": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                "args": {
+                                                                                                                                    "text": [
+                                                                                                                                        "A roll of film\nthat might not be\nGold 200...!"
+                                                                                                                                    ],
+                                                                                                                                    "avatarId": ""
+                                                                                                                                },
+                                                                                                                                "id": "6bd108f0-be34-47a9-868d-eb703eb27eba"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "false": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_IF_VALUE",
+                                                                                                                                "args": {
+                                                                                                                                    "variable": "20",
+                                                                                                                                    "operator": "==",
+                                                                                                                                    "comparator": 4,
+                                                                                                                                    "__collapseElse": false
+                                                                                                                                },
+                                                                                                                                "children": {
+                                                                                                                                    "true": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_TEXT",
+                                                                                                                                            "args": {
+                                                                                                                                                "text": [
+                                                                                                                                                    "A roll of Gold 200\nthat's super rare!"
+                                                                                                                                                ],
+                                                                                                                                                "avatarId": ""
+                                                                                                                                            },
+                                                                                                                                            "id": "86d5569f-7d41-4aba-9a12-973709611101"
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    "false": [
+                                                                                                                                        {
+                                                                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                                                                            "args": {
+                                                                                                                                                "variable": "20",
+                                                                                                                                                "operator": "==",
+                                                                                                                                                "comparator": 5,
+                                                                                                                                                "__collapseElse": false
+                                                                                                                                            },
+                                                                                                                                            "children": {
+                                                                                                                                                "true": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_TEXT",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "text": [
+                                                                                                                                                                "A 10% discount \nvoucher to be used\nat Wally's Shop."
+                                                                                                                                                            ],
+                                                                                                                                                            "avatarId": ""
+                                                                                                                                                        },
+                                                                                                                                                        "id": "f2dc5f92-8f05-4fb5-b628-c7eb143eda3c"
+                                                                                                                                                    }
+                                                                                                                                                ],
+                                                                                                                                                "false": [
+                                                                                                                                                    {
+                                                                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                                                                        "args": {
+                                                                                                                                                            "variable": "20",
+                                                                                                                                                            "operator": "==",
+                                                                                                                                                            "comparator": 7,
+                                                                                                                                                            "__collapseElse": false
+                                                                                                                                                        },
+                                                                                                                                                        "children": {
+                                                                                                                                                            "true": [
+                                                                                                                                                                {
+                                                                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                                                                    "args": {
+                                                                                                                                                                        "text": [
+                                                                                                                                                                            "A bundle of fresh\ngreen onions."
+                                                                                                                                                                        ],
+                                                                                                                                                                        "avatarId": ""
+                                                                                                                                                                    },
+                                                                                                                                                                    "id": "085dadc5-a77b-48e7-9ad8-3e49f28c66e8"
+                                                                                                                                                                }
+                                                                                                                                                            ],
+                                                                                                                                                            "false": [
+                                                                                                                                                                {
+                                                                                                                                                                    "command": "EVENT_IF_VALUE",
+                                                                                                                                                                    "args": {
+                                                                                                                                                                        "variable": "20",
+                                                                                                                                                                        "operator": "==",
+                                                                                                                                                                        "comparator": 8,
+                                                                                                                                                                        "__collapseElse": false
+                                                                                                                                                                    },
+                                                                                                                                                                    "children": {
+                                                                                                                                                                        "true": [
+                                                                                                                                                                            {
+                                                                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                                                                "args": {
+                                                                                                                                                                                    "text": [
+                                                                                                                                                                                        "A pair of shiny\nglasses that seem\nto have been lost."
+                                                                                                                                                                                    ],
+                                                                                                                                                                                    "avatarId": ""
+                                                                                                                                                                                },
+                                                                                                                                                                                "id": "ded9c15f-2eb9-4250-aff8-5c3294c64673"
+                                                                                                                                                                            }
+                                                                                                                                                                        ],
+                                                                                                                                                                        "false": [
+                                                                                                                                                                            {
+                                                                                                                                                                                "command": "EVENT_IF_VALUE",
+                                                                                                                                                                                "args": {
+                                                                                                                                                                                    "variable": "20",
+                                                                                                                                                                                    "operator": "==",
+                                                                                                                                                                                    "comparator": 9,
+                                                                                                                                                                                    "__collapseElse": false
+                                                                                                                                                                                },
+                                                                                                                                                                                "children": {
+                                                                                                                                                                                    "true": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "command": "EVENT_TEXT",
+                                                                                                                                                                                            "args": {
+                                                                                                                                                                                                "text": [
+                                                                                                                                                                                                    "A missing snare\npurchased from\nAssembly Records."
+                                                                                                                                                                                                ],
+                                                                                                                                                                                                "avatarId": ""
+                                                                                                                                                                                            },
+                                                                                                                                                                                            "id": "67a47de6-6a33-4803-a569-4015cdcd2f84"
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ],
+                                                                                                                                                                                    "false": []
+                                                                                                                                                                                },
+                                                                                                                                                                                "id": "be9170d7-c4e2-4f8d-8ba9-0a6320177782"
+                                                                                                                                                                            }
+                                                                                                                                                                        ]
+                                                                                                                                                                    },
+                                                                                                                                                                    "id": "3ee4152b-a993-44bf-834f-85ed51c647d1"
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        },
+                                                                                                                                                        "id": "a422e5f1-cefd-46ea-bfe3-d79b8ef9506e"
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            },
+                                                                                                                                            "id": "7eb8651f-6971-4d71-b42f-d68ee257ef3b"
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                },
+                                                                                                                                "id": "428d4fbb-361c-4043-9d5e-54586e1dfcd9"
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "id": "3042aeba-1974-4f9e-97d9-1344f4c6ecf8"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        "id": "edfc0747-3687-4ec3-94c6-208151bffed7"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "1fea10b9-0e48-48ad-a001-3903b80e991b"
                                                                                         }
                                                                                     ],
                                                                                     "false": [
@@ -17578,14 +18175,19 @@
                                                                                             "children": {
                                                                                                 "true": [
                                                                                                     {
-                                                                                                        "command": "EVENT_TEXT",
+                                                                                                        "command": "EVENT_IF_VALUE",
                                                                                                         "args": {
-                                                                                                            "text": [
-                                                                                                                "Item 5"
-                                                                                                            ],
-                                                                                                            "avatarId": ""
+                                                                                                            "variable": "20",
+                                                                                                            "operator": "==",
+                                                                                                            "comparator": 1,
+                                                                                                            "__collapseElse": false,
+                                                                                                            "__collapse": true
                                                                                                         },
-                                                                                                        "id": "b7054cd2-1ffa-4a4c-8313-4d49d0b035a8"
+                                                                                                        "children": {
+                                                                                                            "true": [],
+                                                                                                            "false": []
+                                                                                                        },
+                                                                                                        "id": "ac11b3a9-e75a-4c6f-962e-09beac98ef60"
                                                                                                     }
                                                                                                 ],
                                                                                                 "false": [
@@ -29700,7 +30302,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -38535,10 +39137,27 @@
                                                 ],
                                                 "override": true,
                                                 "__scriptTabs": "press",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
-                                                "true": []
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SCENE_PUSH_STATE",
+                                                        "args": {},
+                                                        "id": "5199eda3-28dc-4c7b-ac1c-da589313c5f0"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2"
+                                                        },
+                                                        "id": "1602c313-934b-400a-812f-21f53441eff8"
+                                                    }
+                                                ]
                                             },
                                             "id": "576790ee-8b96-4406-88af-bde626c04c45"
                                         }
@@ -74503,8 +75122,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 902,
-        "worldScrollY": 1305,
+        "worldScrollX": 1659,
+        "worldScrollY": 1263,
         "zoom": 125,
         "customColorsEnabled": true,
         "sgbEnabled": false,
