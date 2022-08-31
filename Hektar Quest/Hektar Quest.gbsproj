@@ -39669,7 +39669,8 @@
                         {
                             "command": "EVENT_SET_TRUE",
                             "args": {
-                                "variable": "7"
+                                "variable": "7",
+                                "__comment": true
                             },
                             "id": "cc13a5e5-effa-4504-ba8a-6720d1cb5b1a"
                         },
@@ -87015,17 +87016,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "2b2cfd16-f3e5-4798-8a28-d55b21aaa873",
-        "startX": 22,
-        "startY": 4,
+        "startSceneId": "7b4c6749-3f8c-41ed-bb6b-547cd04c33fb",
+        "startX": 23,
+        "startY": 9,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 2938,
-        "worldScrollY": 5369,
-        "zoom": 400,
+        "worldScrollX": 1280,
+        "worldScrollY": 528,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
