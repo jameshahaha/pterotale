@@ -812,14 +812,16 @@
                     "id": "ff79b819-b435-4ef8-af20-07302038959f",
                     "command": "EVENT_ACTOR_DEACTIVATE",
                     "args": {
-                        "actorId": "player"
+                        "actorId": "player",
+                        "__collapse": true
                     }
                 },
                 {
                     "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
                     "args": {
                         "actorId": "$self$",
-                        "speed": 1
+                        "speed": 1,
+                        "__collapse": true
                     },
                     "id": "a2685579-a437-44c5-bac4-f229ed27cb23"
                 },
@@ -833,19 +835,22 @@
                             "start",
                             "select"
                         ],
-                        "__collapse": false
+                        "__collapse": true
                     }
                 },
                 {
                     "command": "EVENT_MUSIC_STOP",
-                    "args": {},
+                    "args": {
+                        "__collapse": true
+                    },
                     "id": "8ad30b61-5c58-46c0-b51a-55c8d067ac6d"
                 },
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "d86acf68-6951-45f4-967f-1ed850e2b67d",
-                        "loop": true
+                        "loop": true,
+                        "__collapse": true
                     },
                     "id": "61752944-60ac-4b75-9949-19416bc3f00b"
                 },
@@ -884,6 +889,25 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "This might've broke something-- keep this in mind."
+                                            },
+                                            "id": "1aabf36c-d326-4c36-ae66-b7702e0e1566"
+                                        },
+                                        {
+                                            "command": "EVENT_RESET_VARIABLES",
+                                            "args": {},
+                                            "id": "c9bd38e0-cbad-4b7d-a8f8-e9cb4fbeab80"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "10"
+                                            },
+                                            "id": "3538bd5e-8a03-4cc4-acb2-1d583386fc3d"
+                                        },
                                         {
                                             "command": "EVENT_SET_FALSE",
                                             "args": {
@@ -993,7 +1017,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "type": "TOPDOWN",
-            "autoFadeEventCollapse": false,
+            "autoFadeEventCollapse": true,
             "playerSpriteSheetId": "b0071280-6e58-4341-8763-6e8face37125",
             "symbol": "scene_title_screen"
         },
@@ -3110,31 +3134,7 @@
                 0,
                 0,
                 0,
-                0,
                 15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
                 15,
                 15,
                 0,
@@ -3158,7 +3158,31 @@
                 0,
                 0,
                 0,
+                15,
+                15,
+                15,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
+                15,
+                0,
+                0,
+                0,
+                0,
+                15,
                 15,
                 15,
                 0,
@@ -7030,21 +7054,46 @@
                                                 {
                                                     "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "71",
+                                                        "variable": "15",
                                                         "__collapseElse": false
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                "command": "EVENT_IF_TRUE",
                                                                 "args": {
-                                                                    "actorId": "$self$",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "left"
-                                                                    }
+                                                                    "variable": "71",
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "f6e8c2c9-fa94-4fd2-8d99-3a66a965a38d"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "$self$",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "up"
+                                                                                }
+                                                                            },
+                                                                            "id": "f6e8c2c9-fa94-4fd2-8d99-3a66a965a38d"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "$self$",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "right"
+                                                                                }
+                                                                            },
+                                                                            "id": "5d83427c-4dfd-45ed-ae3d-38f50c4029fb"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "58d0cc5b-a2a8-4b7b-b765-33b682ab5066"
                                                             }
                                                         ],
                                                         "false": [
@@ -7061,7 +7110,7 @@
                                                             }
                                                         ]
                                                     },
-                                                    "id": "58d0cc5b-a2a8-4b7b-b765-33b682ab5066"
+                                                    "id": "1f39af7e-ffe7-4875-bc52-bafbafe8e2cb"
                                                 }
                                             ]
                                         },
@@ -17366,7 +17415,7 @@
                                         "a"
                                     ],
                                     "__collapseElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -21004,7 +21053,7 @@
             ],
             "autoFadeSpeed": 1,
             "id": "a8021669-bd73-4f53-a4cd-19038a0f9684",
-            "x": 241.8,
+            "x": 242.24444444444447,
             "y": 534.9636363636364,
             "actors": [
                 {
@@ -21069,6 +21118,13 @@
                                                         "variable": "1"
                                                     },
                                                     "id": "1f763832-b898-4d29-952c-f5200e30164f"
+                                                },
+                                                {
+                                                    "command": "EVENT_ACTOR_HIDE",
+                                                    "args": {
+                                                        "actorId": "$self$"
+                                                    },
+                                                    "id": "0a5bf274-0acf-4d13-ac72-282eef4de90e"
                                                 }
                                             ],
                                             "false": []
@@ -21095,7 +21151,7 @@
                                         "command": "EVENT_IF_FALSE",
                                         "args": {
                                             "variable": "0",
-                                            "__collapseElse": true
+                                            "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
@@ -21107,12 +21163,27 @@
                                                     "id": "c5c15373-7a91-4249-93b6-e7c95d423bbb"
                                                 }
                                             ],
-                                            "false": []
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_ACTOR_HIDE",
+                                                    "args": {
+                                                        "actorId": "$self$"
+                                                    },
+                                                    "id": "0ce51e0e-7dbf-4305-b351-ecd2ca9c4989"
+                                                }
+                                            ]
                                         },
                                         "id": "abfb2b83-2596-438c-b424-031bc802eae3"
                                     }
                                 ],
                                 "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "2dea6890-4ff1-402f-bbd8-d44e393e18ec"
+                                    },
                                     {
                                         "command": "EVENT_ACTOR_DEACTIVATE",
                                         "args": {
@@ -21140,6 +21211,13 @@
                                             "actorId": "$self$"
                                         },
                                         "id": "af00664e-9e82-4af7-bec6-c27821ee3a77"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "9d97b0c2-8146-4689-a5df-04f630592d27"
                                     }
                                 ],
                                 "false": []
@@ -21154,6 +21232,13 @@
                             },
                             "children": {
                                 "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "fa912eec-8042-45cb-a974-61201f0ad7ea"
+                                    },
                                     {
                                         "command": "EVENT_ACTOR_DEACTIVATE",
                                         "args": {
@@ -21225,6 +21310,13 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "14"
+                    },
+                    "id": "7767d28d-c7fb-4e19-9c55-3fd103c0f009"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -32436,105 +32528,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "829d4d54-1601-4129-81e9-3705eeabae3d"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Cucumbers"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "3b9dbdea-ad8d-41d1-b41d-cf1da03864b5"
+                                                    "id": "11ea729b-58b5-45e9-9d0f-b286f795bc8f"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 3,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Cucumbers"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "3b9dbdea-ad8d-41d1-b41d-cf1da03864b5"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 4
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 3,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "3dc6abe2-5335-42da-b17c-85cd12a27059"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 4
+                                                                                }
+                                                                            },
+                                                                            "id": "3dc6abe2-5335-42da-b17c-85cd12a27059"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "33edc62e-d76a-46d0-b12e-5625eb7d3ece"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "17bd3352-c4c4-4fa8-bdfe-5eb4faac3334"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "cfd199ed-21be-424c-bd12-e5487b64c0a1"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "90e14d81-e717-4c21-a74d-0670b37704e4"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "33edc62e-d76a-46d0-b12e-5625eb7d3ece"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "17bd3352-c4c4-4fa8-bdfe-5eb4faac3334"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "cfd199ed-21be-424c-bd12-e5487b64c0a1"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "90e14d81-e717-4c21-a74d-0670b37704e4"
+                                                    "id": "a9419371-cad8-4d63-a06e-c3f66cf07b68"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "a9419371-cad8-4d63-a06e-c3f66cf07b68"
+                                        "id": "26953de0-8ab5-4e9e-9e3d-8b8d08cc2b77"
                                     }
                                 ],
                                 "false": []
@@ -32583,105 +32689,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "a933f766-e53a-42c1-a82f-0e58fcb9e516"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Okra."
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "2a528a4a-beb7-4759-bb05-321269fc6f20"
+                                                    "id": "81216d59-b7c2-45c5-87b9-b081b92a9b79"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 1,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Okra."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "2a528a4a-beb7-4759-bb05-321269fc6f20"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 2
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 1,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "a64dc23b-e71a-4019-aa47-6a904c48281a"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 2
+                                                                                }
+                                                                            },
+                                                                            "id": "a64dc23b-e71a-4019-aa47-6a904c48281a"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "9141e7a0-072b-4c02-a48b-a168a81dd433"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "1931df3f-da5f-4d5a-b461-a7bdfa5d1ee4"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "24f7d5bf-8746-4dfb-832c-f53a105a03f5"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "5a5db7d8-9e9f-46ce-aa59-efa119b50a8b"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "9141e7a0-072b-4c02-a48b-a168a81dd433"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "1931df3f-da5f-4d5a-b461-a7bdfa5d1ee4"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "24f7d5bf-8746-4dfb-832c-f53a105a03f5"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "5a5db7d8-9e9f-46ce-aa59-efa119b50a8b"
+                                                    "id": "ddb0853d-4643-493a-a08e-1af65badf09a"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "ddb0853d-4643-493a-a08e-1af65badf09a"
+                                        "id": "1430696d-2086-42c3-8a7f-4c71832f3fa6"
                                     }
                                 ],
                                 "false": []
@@ -32907,7 +33027,7 @@
                                                                             "args": {
                                                                                 "variable": "41",
                                                                                 "__collapseElse": false,
-                                                                                "__collapse": false
+                                                                                "__collapse": true
                                                                             },
                                                                             "children": {
                                                                                 "true": [
@@ -33284,105 +33404,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "79a058e6-df13-44bf-aad0-d901b9df3748"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Kabocha."
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "088646b7-6dd7-4ae1-83e5-1f205f3461d2"
+                                                    "id": "312058ee-2fd6-4e2f-8f91-071ad968c5bf"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": "0",
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Kabocha."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "088646b7-6dd7-4ae1-83e5-1f205f3461d2"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 1
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": "0",
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "afcad090-5cd9-42f4-b3b8-60b260f4c9af"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 1
+                                                                                }
+                                                                            },
+                                                                            "id": "afcad090-5cd9-42f4-b3b8-60b260f4c9af"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "979fe580-2482-4bc9-9e0b-4a58b9dfd4aa"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "06b61b23-d61e-4180-bb78-35b15d5b2e97"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "60fafe69-ec29-405c-9cca-7d84837a341a"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "2e5da2f4-e5a1-4dfa-acbb-01419a96ecd3"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "979fe580-2482-4bc9-9e0b-4a58b9dfd4aa"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "06b61b23-d61e-4180-bb78-35b15d5b2e97"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "60fafe69-ec29-405c-9cca-7d84837a341a"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "2e5da2f4-e5a1-4dfa-acbb-01419a96ecd3"
+                                                    "id": "1a330491-cbcf-4dc3-9f29-3a3b7c9f1678"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "1a330491-cbcf-4dc3-9f29-3a3b7c9f1678"
+                                        "id": "43c4facd-91cf-47fa-9932-cc78ed79618b"
                                     }
                                 ],
                                 "false": []
@@ -33440,105 +33574,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "52f270cc-6a00-45aa-a981-556c810b435b"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Radishes"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "65da1d90-444b-4cc3-b697-7743d9f8f144"
+                                                    "id": "39441604-b9b7-40f3-85dc-b408af122091"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 4,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Radishes"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "65da1d90-444b-4cc3-b697-7743d9f8f144"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 5
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 4,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "c35852bc-cdc2-4bce-a927-a5ffaaf4461b"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 5
+                                                                                }
+                                                                            },
+                                                                            "id": "c35852bc-cdc2-4bce-a927-a5ffaaf4461b"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "b223510a-2565-4389-8f2d-8df609459c62"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "bf8e1f55-d155-4cfd-8b7d-8be3e7ac43b4"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "67623133-c37a-4b80-b61d-595d2e5c0945"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "1e30d0be-37d0-440a-97b3-39866bb3a50e"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "b223510a-2565-4389-8f2d-8df609459c62"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "bf8e1f55-d155-4cfd-8b7d-8be3e7ac43b4"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "67623133-c37a-4b80-b61d-595d2e5c0945"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "1e30d0be-37d0-440a-97b3-39866bb3a50e"
+                                                    "id": "9bd61836-4ee5-4fcc-bd32-3df325252eb8"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "9bd61836-4ee5-4fcc-bd32-3df325252eb8"
+                                        "id": "14891d81-3a42-48cf-892a-954db2d63c7c"
                                     }
                                 ],
                                 "false": []
@@ -33595,105 +33743,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "384f02d0-d24e-4747-9ecb-6fd6f803bbb6"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Pineapple"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "2f71948c-d50a-44c5-869e-5715b8a6ad52"
+                                                    "id": "dfcb08a6-bd52-4f3d-8d03-9934e9e92989"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 2,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Pineapple"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "2f71948c-d50a-44c5-869e-5715b8a6ad52"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 3
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 2,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "f0b8cf99-12a5-4d71-9f7f-7838c610049c"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 3
+                                                                                }
+                                                                            },
+                                                                            "id": "f0b8cf99-12a5-4d71-9f7f-7838c610049c"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "cbd890e9-7416-4a62-8131-ebc7203a863c"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "a18cf4fa-a96c-484e-bdaf-ba6c68b23c5d"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "b28436fb-6cda-43f0-98fb-3379c40040d0"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "28ec003b-5667-4329-a89d-c0037f33a3e5"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "cbd890e9-7416-4a62-8131-ebc7203a863c"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "a18cf4fa-a96c-484e-bdaf-ba6c68b23c5d"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "b28436fb-6cda-43f0-98fb-3379c40040d0"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "28ec003b-5667-4329-a89d-c0037f33a3e5"
+                                                    "id": "e481078f-1fb6-4f11-8ebb-54654848b884"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "e481078f-1fb6-4f11-8ebb-54654848b884"
+                                        "id": "51ac1868-e705-406a-9c33-9ee715bd9c67"
                                     }
                                 ],
                                 "false": []
@@ -33750,105 +33912,119 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "21507f2a-d6e2-46b4-b4ad-625f751b7f72"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Arugula"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "18dc4e48-44ff-4727-891c-49871867bcd3"
+                                                    "id": "d0b12b94-9840-489a-9704-9c55cb036329"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 5,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Arugula"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "18dc4e48-44ff-4727-891c-49871867bcd3"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 6
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 5,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "ba7c84d3-feec-43a2-95e4-76355269fb3d"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 6
+                                                                                }
+                                                                            },
+                                                                            "id": "ba7c84d3-feec-43a2-95e4-76355269fb3d"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "645c6ac9-c193-4e0d-bd15-bb919e7f8d9c"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "8f4f158e-5d76-449f-a46f-8c69047450bd"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "2b2f1ab2-a1a5-450e-ac16-9abb5ba2f0c2"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "ad39b9a9-3aa2-4b73-9845-53cd17bed931"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "645c6ac9-c193-4e0d-bd15-bb919e7f8d9c"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "8f4f158e-5d76-449f-a46f-8c69047450bd"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "2b2f1ab2-a1a5-450e-ac16-9abb5ba2f0c2"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "ad39b9a9-3aa2-4b73-9845-53cd17bed931"
+                                                    "id": "fffe4d05-12d4-4755-9588-7e84889c4eee"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "fffe4d05-12d4-4755-9588-7e84889c4eee"
+                                        "id": "1f35c149-66fc-4838-9423-cf31e8b55885"
                                     }
                                 ],
                                 "false": []
@@ -33898,105 +34074,120 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "3b9dc8d2-4ba4-42a6-b8db-ef83f20d311f"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Pomelo"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "78066e65-a78e-4006-8fc9-efa186a348df"
+                                                    "id": "cdcddad7-f01f-4130-a372-c686c65570b9"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 6,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true,
+                                                        "__collapse": false
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Pomelo"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "78066e65-a78e-4006-8fc9-efa186a348df"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 7
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 6,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "cac99022-44be-4806-a9c4-6fec4bc93f7d"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 7
+                                                                                }
+                                                                            },
+                                                                            "id": "cac99022-44be-4806-a9c4-6fec4bc93f7d"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "004b2e9b-8a2d-44a9-9f1e-53aa93a5e55f"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "825350a4-96d5-4283-9e29-e47c6965e1d3"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "adaaa678-1634-44c2-a7c0-61587cb4763c"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "66c7694a-98fb-47ac-9db3-ec18b998bdf7"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "004b2e9b-8a2d-44a9-9f1e-53aa93a5e55f"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Hmm.. that\ndoesn't seem\ncorrect.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Let's try it\nagain.!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
-                                                                    ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
-                                                                },
-                                                                "id": "825350a4-96d5-4283-9e29-e47c6965e1d3"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "adaaa678-1634-44c2-a7c0-61587cb4763c"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "66c7694a-98fb-47ac-9db3-ec18b998bdf7"
+                                                    "id": "c7dbdb60-9d7c-476d-9bc5-b8d26fca94f1"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "c7dbdb60-9d7c-476d-9bc5-b8d26fca94f1"
+                                        "id": "c6735279-4fdd-45d2-8262-66ead208d100"
                                     }
                                 ],
                                 "false": []
@@ -34053,106 +34244,127 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "variable": "L0",
-                                            "trueText": "Refill",
-                                            "falseText": "Cancel"
-                                        },
-                                        "id": "3aaab484-27d4-4e76-b25c-53b60d451a6a"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
+                                            "variable": "74",
+                                            "__collapseElse": true,
+                                            "__collapse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_CHOICE",
                                                     "args": {
-                                                        "text": [
-                                                            "Refilled Green\nOnions"
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "L0",
+                                                        "trueText": "Refill",
+                                                        "falseText": "Cancel"
                                                     },
-                                                    "id": "dd1396b6-80fb-44a4-9abb-bcbcb42f6a09"
+                                                    "id": "80692ce7-5487-4c3e-9766-bfbeff967cdf"
                                                 },
                                                 {
-                                                    "command": "EVENT_IF_VALUE",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "variable": "40",
-                                                        "operator": "==",
-                                                        "comparator": 7,
-                                                        "__collapseElse": false
+                                                        "variable": "L0",
+                                                        "__collapseElse": true
                                                     },
                                                     "children": {
                                                         "true": [
                                                             {
-                                                                "command": "EVENT_SET_VALUE",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Refilled Green\nOnions"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "dd1396b6-80fb-44a4-9abb-bcbcb42f6a09"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_IF_VALUE",
                                                                 "args": {
                                                                     "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 8
-                                                                    }
+                                                                    "operator": "==",
+                                                                    "comparator": 7,
+                                                                    "__collapseElse": false
                                                                 },
-                                                                "id": "bcc4eb0b-5f5e-44f9-940d-9075c98db1e2"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_ACTOR_SET_DIRECTION",
-                                                                "args": {
-                                                                    "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
-                                                                    "direction": {
-                                                                        "type": "direction",
-                                                                        "value": "down"
-                                                                    }
-                                                                },
-                                                                "id": "45edaa0c-c5c6-448e-8f65-f3476a83f9c6"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                                                "args": {
-                                                                    "__scriptTabs": "text",
-                                                                    "text": [
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Ding ding!\nThat's it,\nyou did it!!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
-                                                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Come back\nhere for your\nprize!!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 8
+                                                                                }
+                                                                            },
+                                                                            "id": "bcc4eb0b-5f5e-44f9-940d-9075c98db1e2"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                            "args": {
+                                                                                "actorId": "ce13f74a-1874-4809-8568-42fb1d1b5348",
+                                                                                "direction": {
+                                                                                    "type": "direction",
+                                                                                    "value": "down"
+                                                                                }
+                                                                            },
+                                                                            "id": "45edaa0c-c5c6-448e-8f65-f3476a83f9c6"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                            "args": {
+                                                                                "__scriptTabs": "text",
+                                                                                "text": [
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Ding ding!\nThat's it,\nyou did it!!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Come back\nhere for your\nprize!!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!"
+                                                                                ],
+                                                                                "nameTag": "Anna",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "",
+                                                                                "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left"
+                                                                            },
+                                                                            "id": "a905ca55-b0b0-4b5a-9ebb-36123591be21"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_SET_TRUE",
+                                                                            "args": {
+                                                                                "variable": "74"
+                                                                            },
+                                                                            "id": "e3616e66-114d-4762-8b75-7e1fad30432d"
+                                                                        }
                                                                     ],
-                                                                    "nameTag": "Anna",
-                                                                    "nameX": 2,
-                                                                    "avatarType": "large",
-                                                                    "avatarId": "",
-                                                                    "largeAvatar": "!F:bdd4377a-963e-48e3-a668-dcdfbfe57457!ABCD\nQRST\nabcd\nqrst",
-                                                                    "avatarX": 2,
-                                                                    "avatarY": 2,
-                                                                    "avatarWidth": 4,
-                                                                    "orientation": "left"
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_SET_VALUE",
+                                                                            "args": {
+                                                                                "variable": "40",
+                                                                                "value": {
+                                                                                    "type": "number",
+                                                                                    "value": 0
+                                                                                }
+                                                                            },
+                                                                            "id": "c845b806-d61b-42c2-bebb-d04edf38570d"
+                                                                        }
+                                                                    ]
                                                                 },
-                                                                "id": "a905ca55-b0b0-4b5a-9ebb-36123591be21"
+                                                                "id": "01f7826d-ca0b-4b16-af93-f7815eb746e2"
                                                             }
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_SET_VALUE",
-                                                                "args": {
-                                                                    "variable": "40",
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "value": 0
-                                                                    }
-                                                                },
-                                                                "id": "c845b806-d61b-42c2-bebb-d04edf38570d"
-                                                            }
-                                                        ]
+                                                        "false": []
                                                     },
-                                                    "id": "01f7826d-ca0b-4b16-af93-f7815eb746e2"
+                                                    "id": "9cfcb95e-1d63-4978-a925-df7efd29dd42"
                                                 }
                                             ],
                                             "false": []
                                         },
-                                        "id": "9cfcb95e-1d63-4978-a925-df7efd29dd42"
+                                        "id": "900df3bf-a943-4606-8035-28dbbf7f0204"
                                     }
                                 ],
                                 "false": []
@@ -34197,6 +34409,31 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "16"
+                    },
+                    "id": "f2f0ed7c-212c-4540-a746-8086092f2f4a"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "40",
+                        "value": {
+                            "type": "number",
+                            "value": 7
+                        }
+                    },
+                    "id": "0c48d35f-762e-4206-a8b2-5bbfb26bb897"
+                },
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "38"
+                    },
+                    "id": "8207c4ab-e4f5-4958-849f-ff4ba869401a"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -67528,7 +67765,8 @@
             "height": 24,
             "imageWidth": 256,
             "imageHeight": 192,
-            "filename": "Working Ocean Viewpoint Draft 1.png"
+            "filename": "Working Ocean Viewpoint Draft 1.png",
+            "tileColors": []
         },
         {
             "id": "6fad1892-bcb2-4924-bd1c-1e4d03dfeabb",
@@ -86488,6 +86726,26 @@
             "symbol": "var_spokewithsuperio_0"
         },
         {
+            "id": "70",
+            "name": "perfectQuest2",
+            "symbol": "var_perfectquest2"
+        },
+        {
+            "id": "71",
+            "name": "imperfectQuest2",
+            "symbol": "var_imperfectquest2"
+        },
+        {
+            "id": "72",
+            "name": "sideQuestsDone",
+            "symbol": "var_sidequestsdone"
+        },
+        {
+            "id": "73",
+            "name": "mainQuestsDone",
+            "symbol": "var_mainquestsdone"
+        },
+        {
             "id": "e576a447-9dcf-46e5-8dc3-b1431e2e0509__L0",
             "name": "busTravel",
             "symbol": "var_bustravel"
@@ -86568,24 +86826,9 @@
             "symbol": "var_refillproduce_0"
         },
         {
-            "id": "70",
-            "name": "perfectQuest2",
-            "symbol": "var_perfectquest2"
-        },
-        {
-            "id": "71",
-            "name": "imperfectQuest2",
-            "symbol": "var_imperfectquest2"
-        },
-        {
-            "id": "72",
-            "name": "sideQuestsDone",
-            "symbol": "var_sidequestsdone"
-        },
-        {
-            "id": "73",
-            "name": "mainQuestsDone",
-            "symbol": "var_mainquestsdone"
+            "id": "74",
+            "name": "disableProduceRefill",
+            "symbol": "var_disableproducerefill"
         }
     ],
     "engineFieldValues": [
@@ -86595,17 +86838,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
-        "startX": 9,
-        "startY": 12,
+        "startSceneId": "65db0012-7467-4e3a-808d-e4a6c876a61e",
+        "startX": 19,
+        "startY": 22,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 850,
-        "worldScrollY": 1352,
-        "zoom": 125,
+        "worldScrollX": 1546,
+        "worldScrollY": 1485,
+        "zoom": 225,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
