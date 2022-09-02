@@ -4507,7 +4507,7 @@
                                         "args": {
                                             "sceneId": "b7b91980-33b4-4ef6-a9ee-cd94da24ba9c",
                                             "x": 2,
-                                            "y": 31,
+                                            "y": 30,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -4552,8 +4552,8 @@
                                                     "command": "EVENT_SWITCH_SCENE",
                                                     "args": {
                                                         "sceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
-                                                        "x": 21,
-                                                        "y": 10,
+                                                        "x": 22,
+                                                        "y": 19,
                                                         "direction": "down",
                                                         "fadeSpeed": "2"
                                                     },
@@ -5176,7 +5176,7 @@
                 null,
                 null,
                 null,
-                "default-bg-2",
+                "9ea37466-dc17-4974-bf2f-704e16ced2cf",
                 null,
                 "d0616c5e-84ac-4333-ac22-77f2d0abc019",
                 "9ea37466-dc17-4974-bf2f-704e16ced2cf"
@@ -6093,7 +6093,7 @@
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
+                    "spriteSheetId": "4771ca49-e512-4332-902c-631ebb647eb4",
                     "direction": "down",
                     "moveSpeed": 1,
                     "animSpeed": 15,
@@ -6102,17 +6102,24 @@
                     "collisionGroup": "",
                     "script": [
                         {
+                            "command": "EVENT_PALETTE_SET_UI",
+                            "args": {
+                                "palette": "ad7df42b-1ec9-41b1-8d92-0a6ed0a44983"
+                            },
+                            "id": "122931e5-6ff7-4d2c-9898-3587e114ff38"
+                        },
+                        {
                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                             "args": {
-                                "__scriptTabs": "avatar",
+                                "__scriptTabs": "text",
                                 "text": [
-                                    "Welcome to \nKangapost!"
+                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Welcome to \nKangapost!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                 ],
-                                "nameTag": "Shopkeeper",
+                                "nameTag": "Mark",
                                 "nameX": 2,
                                 "avatarType": "large",
                                 "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
-                                "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
+                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
                                 "avatarX": 2,
                                 "avatarY": 2,
                                 "avatarWidth": 4,
@@ -6131,34 +6138,25 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_TEXT",
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                         "args": {
+                                            "__scriptTabs": "text",
                                             "text": [
-                                                "You're visiting us\non your day off?"
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Visiting us\non your day\noff? Great\ntiming.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I have a few\ntasks that \nI'll need some\nhelp with.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                             ],
-                                            "avatarId": ""
+                                            "nameTag": "Mark",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                            "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": false
                                         },
-                                        "id": "a2c6b71c-f805-4ae6-9eb9-eae5088e8a4f"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Good timing!"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "ad3b1541-0bb4-4e37-96d0-c579a410e612"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "I have a few tasks\nthat I might need\nsome help with!"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "9e486d6c-d8be-4e44-ae9c-f06ad3c75811"
+                                        "id": "ba02102b-cbcb-48ff-8b28-ee264b8d1fd5"
                                     },
                                     {
                                         "command": "EVENT_SET_FALSE",
@@ -6177,14 +6175,24 @@
                                 ],
                                 "false": [
                                     {
-                                        "command": "EVENT_TEXT",
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                         "args": {
+                                            "__scriptTabs": "text",
                                             "text": [
-                                                "How can I help?"
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!How can I\nhelp?!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                             ],
-                                            "avatarId": ""
+                                            "nameTag": "Mark",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                            "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": false
                                         },
-                                        "id": "3380bd43-3639-4b18-9e79-0385d6da2d22"
+                                        "id": "d68ab0c6-d9b6-42a5-9b64-387e29060a2d"
                                     }
                                 ]
                             },
@@ -6217,16 +6225,25 @@
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                     "args": {
+                                                        "__scriptTabs": "text",
                                                         "text": [
-                                                            "Anita might need\nsome help in the\nMarketplace!",
-                                                            "Head West from\nhere to see Anita.",
-                                                            "Best of luck!"
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Anita might\nneed some help\nin the Market-\nplace.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Head West from\nhere to find\nAnita!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                         ],
-                                                        "avatarId": ""
+                                                        "nameTag": "Mark",
+                                                        "nameX": 2,
+                                                        "avatarType": "large",
+                                                        "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                        "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                        "avatarX": 2,
+                                                        "avatarY": 2,
+                                                        "avatarWidth": 4,
+                                                        "orientation": "left",
+                                                        "__collapse": false
                                                     },
-                                                    "id": "382c72cf-916e-4206-b8ad-84fe226a4840"
+                                                    "id": "c6c8f44e-1c8c-4669-ae05-4d577a2c1e91"
                                                 }
                                             ],
                                             "false": [
@@ -6243,23 +6260,32 @@
                                                                 "command": "EVENT_IF_FALSE",
                                                                 "args": {
                                                                     "variable": "15",
-                                                                    "__collapseElse": true,
+                                                                    "__collapseElse": false,
                                                                     "__collapse": false
                                                                 },
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "Thanks for helping\nout Anita!! Here's\nyour next task.",
-                                                                                    "Reem might need\nsome assistance\nwith some film.",
-                                                                                    "Please head out \nto the Beach to \nsee how to help!",
-                                                                                    "Best of luck!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Here's your\nnext task.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Reem will need\nhelp finding\nsome film.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Please head\nto the Beach\nto get some\nmore details.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "0f7160b0-ec64-408b-9e54-a3f89417cbbf"
+                                                                            "id": "d28f42f1-c46a-4376-ac91-60a0d86a2e93"
                                                                         }
                                                                     ],
                                                                     "false": []
@@ -6277,14 +6303,24 @@
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "I think you should\nfinish helping out\nAnita first!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I think you\nshould finish\nhelping out\nAnita first!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "6ddbab37-ee16-47d4-874c-f2ad9a06348f"
+                                                                            "id": "bb27b180-bcdc-457a-9c8f-4906337b3c86"
                                                                         }
                                                                     ],
                                                                     "false": []
@@ -6314,17 +6350,26 @@
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "You saved Reem!\nGreat work! Here's\nyour next task.",
-                                                                                    "I hear that Allen\nmight need some \nassistance...!",
-                                                                                    "Please head out \nto Kaseyramen\nto see what's up.",
-                                                                                    "Best of luck!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Here's your\nnext task.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I hear that\nAllen might\nneed some\nassistance..!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Please head\nto Kaseyramen\nto see what's\ncooking.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "0a1f77ad-87ef-4226-87da-32ea1a28dfa9"
+                                                                            "id": "330035c1-c662-411f-bfac-6b66ad437c9d"
                                                                         },
                                                                         {
                                                                             "command": "EVENT_SET_TRUE",
@@ -6349,14 +6394,24 @@
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "I think you should\nfinish helping out\nReem first!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I think you\nshould finish\nhelping out\nReem first!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "f98c3b7e-5d57-4b38-a43f-d93b9faf861e"
+                                                                            "id": "930c54d8-14d4-4038-8948-3751856cd65e"
                                                                         }
                                                                     ],
                                                                     "false": []
@@ -6380,23 +6435,32 @@
                                                                 "command": "EVENT_IF_FALSE",
                                                                 "args": {
                                                                     "variable": "17",
-                                                                    "__collapseElse": true,
+                                                                    "__collapseElse": false,
                                                                     "__collapse": false
                                                                 },
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "Great job getting\nthe green onions\nfor Allen! ",
-                                                                                    "Your next task is\nonce again in\nthe Marketplace.",
-                                                                                    "Please check with \nBiboye to see \nwhat's up.",
-                                                                                    "Best of luck!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Here's your\nnext task.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Biboye's\nsomewhere in\nMarketplace.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Please go\nand find him\nto get more\ndetails!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "e1911122-90b0-4134-88de-3c89880dc835"
+                                                                            "id": "6e7ab752-9d76-418e-8930-b2f515f7f6ab"
                                                                         },
                                                                         {
                                                                             "command": "EVENT_SET_TRUE",
@@ -6421,14 +6485,24 @@
                                                                 "children": {
                                                                     "true": [
                                                                         {
-                                                                            "command": "EVENT_TEXT",
+                                                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                             "args": {
+                                                                                "__scriptTabs": "text",
                                                                                 "text": [
-                                                                                    "I think you should\nfinish helping out\nAllen first!"
+                                                                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I think you\nshould finish\nhelping out\nAllen first!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                                                 ],
-                                                                                "avatarId": ""
+                                                                                "nameTag": "Mark",
+                                                                                "nameX": 2,
+                                                                                "avatarType": "large",
+                                                                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                                                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                                                                "avatarX": 2,
+                                                                                "avatarY": 2,
+                                                                                "avatarWidth": 4,
+                                                                                "orientation": "left",
+                                                                                "__collapse": false
                                                                             },
-                                                                            "id": "4d3cd8de-07d3-4c9e-b43e-8b87c5834696"
+                                                                            "id": "b7ec5bf5-f2b4-4bfb-8e91-12dba812869f"
                                                                         }
                                                                     ],
                                                                     "false": []
@@ -6443,28 +6517,11 @@
                                                     "command": "EVENT_IF_TRUE",
                                                     "args": {
                                                         "variable": "7",
-                                                        "__collapseElse": false,
+                                                        "__collapseElse": true,
                                                         "__collapse": false
                                                     },
                                                     "children": {
-                                                        "true": [
-                                                            {
-                                                                "command": "EVENT_TEXT",
-                                                                "args": {
-                                                                    "text": [
-                                                                        "That was our final\ntask for the day!",
-                                                                        "Thanks so much for\nhelping everyone\nout, Hektar.",
-                                                                        "If you don't mind,\nthere might be\nsomething waiting",
-                                                                        "for you over at \nCity Hall. ",
-                                                                        "Make sure you\nfinish off any of\nyour remaining",
-                                                                        "side quests if you\nhave anymore left!",
-                                                                        "Otherwise, I'll be\nwaiting for you at\nCity Hall!"
-                                                                    ],
-                                                                    "avatarId": ""
-                                                                },
-                                                                "id": "89bebb6c-423d-4a99-b7f5-4390950b309e"
-                                                            }
-                                                        ],
+                                                        "true": [],
                                                         "false": []
                                                     },
                                                     "id": "046e60eb-3569-4f7a-9c47-a8017579635f"
@@ -6479,7 +6536,35 @@
                             "id": "74e46bcc-827a-43ed-b6df-3cfaa154edae"
                         }
                     ],
-                    "startScript": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "7",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "fc2465b0-e23f-4dbe-9f8d-a3fae45ed7e3"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "a11e0415-cc3c-40f5-9975-0e3b9f4cf2e5"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d972c252-09c8-4071-b0bb-dbda40cbf326"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
@@ -6488,6 +6573,209 @@
                     "x": 19,
                     "y": 16,
                     "symbol": "actor_3"
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "4771ca49-e512-4332-902c-631ebb647eb4",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_87",
+                    "script": [
+                        {
+                            "command": "EVENT_PALETTE_SET_UI",
+                            "args": {
+                                "palette": "ad7df42b-1ec9-41b1-8d92-0a6ed0a44983"
+                            },
+                            "id": "76ad3fc6-2bc3-42f5-b2b2-9a6b9e4ddc06"
+                        },
+                        {
+                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "text": [
+                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Welcome to \nKangapost!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                ],
+                                "nameTag": "Mark",
+                                "nameX": 2,
+                                "avatarType": "large",
+                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                "avatarX": 2,
+                                "avatarY": 2,
+                                "avatarWidth": 4,
+                                "orientation": "left",
+                                "__collapse": false
+                            },
+                            "id": "fb0eb13f-1861-4511-8974-5c20e0240db1"
+                        },
+                        {
+                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                            "args": {
+                                "__scriptTabs": "text",
+                                "text": [
+                                    "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!How can I\nhelp?!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                ],
+                                "nameTag": "Mark",
+                                "nameX": 2,
+                                "avatarType": "large",
+                                "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                "avatarX": 2,
+                                "avatarY": 2,
+                                "avatarWidth": 4,
+                                "orientation": "left",
+                                "__collapse": false
+                            },
+                            "id": "cfacd1f1-9425-47b2-b6fa-6c3aae6e2880"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L0",
+                                "trueText": "Get Next Quest",
+                                "falseText": "Cancel",
+                                "__collapse": false
+                            },
+                            "id": "dd20cb8d-72be-45ca-997e-4a0f14202b2b"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!That was our\nfinal task for\nthe day!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Thanks for\nhelping out\neverybody,\nHektar.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                            ],
+                                            "nameTag": "Mark",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                            "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": false,
+                                            "__comment": false
+                                        },
+                                        "id": "c7653ce1-5c27-4616-8be6-2e2a1e47ec84"
+                                    },
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Make sure you\nfinish off any\nremaining\nside quests!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!if you have\nanymore left!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                            ],
+                                            "nameTag": "Mark",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                            "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": false,
+                                            "__comment": false
+                                        },
+                                        "id": "54af6373-23ee-492a-bd2f-63da59e631d5"
+                                    },
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!There's going\nto be an event\nin City Hall\nafterwards!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!so be sure\nto stop by\nwhen you're\nfinished up!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                            ],
+                                            "nameTag": "Mark",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "883bcbfc-69ab-424f-886a-8855970da065",
+                                            "largeAvatar": "!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": false,
+                                            "__comment": false
+                                        },
+                                        "id": "589a1574-11be-4ac8-ba7c-375137479570"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "96085ac6-387b-43a1-8575-7729e439b491"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "7",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SHOW",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "f02bad56-803d-4c7f-a8e7-afa54a37c695"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_ACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "e53b5e3c-7d89-4dc2-b68c-a5ef8a4cfb24"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "7d9c2b9a-4190-420e-9e30-19ca6c3738db"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "263c3d6b-3955-4716-9bb7-4154aa2d05e7"
+                                    }
+                                ]
+                            },
+                            "id": "7ecd2a95-90ea-4189-b082-9f639dbd7678"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "02bd4ef1-d2b0-4f7c-9337-6ec5760acc2b",
+                    "x": 19,
+                    "y": 16
                 }
             ],
             "triggers": [
@@ -6516,6 +6804,15 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "7",
+                        "__collapse": false,
+                        "__comment": true
+                    },
+                    "id": "394e3b0e-7a09-4b54-a6d5-d84c1184b5e7"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -10925,7 +11222,7 @@
                 {
                     "name": "",
                     "id": "8d887b88-d16b-48b1-912c-a044b9ca4cc8",
-                    "x": 36,
+                    "x": 34,
                     "y": 5,
                     "width": 1,
                     "height": 3,
@@ -10934,7 +11231,7 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "2b2cfd16-f3e5-4798-8a28-d55b21aaa873",
-                                "x": 2,
+                                "x": 1,
                                 "y": 6,
                                 "direction": "right",
                                 "fadeSpeed": "2"
@@ -19057,8 +19354,43 @@
                 0,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
+                0,
+                0,
+                15,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -19114,7 +19446,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -19149,6 +19481,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -19156,9 +19489,8 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -19184,6 +19516,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -19195,9 +19528,8 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -19219,14 +19551,7 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -19240,34 +19565,6 @@
                 0,
                 15,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -19616,7 +19913,7 @@
                 "d0616c5e-84ac-4333-ac22-77f2d0abc019",
                 null,
                 "9ea37466-dc17-4974-bf2f-704e16ced2cf",
-                "d0616c5e-84ac-4333-ac22-77f2d0abc019"
+                "default-bg-2"
             ],
             "spritePaletteIds": [],
             "collisions": [
@@ -19765,20 +20062,10 @@
                 0,
                 0,
                 0,
-                15,
                 0,
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
                 0,
                 0,
                 0,
@@ -19789,6 +20076,16 @@
                 0,
                 0,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -20119,6 +20416,299 @@
                     "id": "ab9a7f02-7182-4af0-a6d8-6818e7d82ba6",
                     "x": 12,
                     "y": 8
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "6a14e2ae-bd32-43ce-a229-028f81953766",
+                    "direction": "left",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_86",
+                    "script": [
+                        {
+                            "command": "EVENT_PALETTE_SET_UI",
+                            "args": {
+                                "palette": "01ee273f-e12e-4dee-8778-09d7c20db1f6"
+                            },
+                            "id": "8d235a31-5eb8-49aa-9c96-a3a031182eda"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "75",
+                                "__collapseElse": false,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Enjoy dude..!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                            ],
+                                            "nameTag": "Rosty",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "",
+                                            "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left"
+                                        },
+                                        "id": "3a8458b8-9f93-4133-8085-066f4ba52555"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Dang..\nI saw this\nreally cool\nduck hat in!F:b38e1640-7e65-4290-a11b-ad90be7174d3!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!the Market-\nplace..\nI should've\nbought it.!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                            ],
+                                            "nameTag": "Rosty",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "",
+                                            "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left"
+                                        },
+                                        "id": "e7ee55b1-dbe5-4008-bbac-e36f4d96ecea"
+                                    }
+                                ]
+                            },
+                            "id": "2f6922ec-add9-4de6-97b9-007594772129"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "28",
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                        "args": {
+                                            "__scriptTabs": "text",
+                                            "text": [
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Wait..\nYou have one?!F:b38e1640-7e65-4290-a11b-ad90be7174d3!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Would you\ntrade that to\nme for this\nRare Shroom?!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                            ],
+                                            "nameTag": "Rosty",
+                                            "nameX": 2,
+                                            "avatarType": "large",
+                                            "avatarId": "",
+                                            "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                            "avatarX": 2,
+                                            "avatarY": 2,
+                                            "avatarWidth": 4,
+                                            "orientation": "left",
+                                            "__collapse": true
+                                        },
+                                        "id": "f45cc479-6697-44cc-96f5-e59b1ecd4e6b"
+                                    },
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L0",
+                                            "trueText": "Yes",
+                                            "falseText": "No",
+                                            "__collapse": true
+                                        },
+                                        "id": "361a3110-5bad-4d11-bc56-6dae6947823d"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L0",
+                                            "__collapseElse": false,
+                                            "__collapse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                    "args": {
+                                                        "__scriptTabs": "text",
+                                                        "text": [
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Amazing.\nHere, just\neat it now\ndude.!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                                        ],
+                                                        "nameTag": "Rosty",
+                                                        "nameX": 2,
+                                                        "avatarType": "large",
+                                                        "avatarId": "",
+                                                        "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                                        "avatarX": 2,
+                                                        "avatarY": 2,
+                                                        "avatarWidth": 4,
+                                                        "orientation": "left"
+                                                    },
+                                                    "id": "a6463db9-998e-414c-9be0-231089ad7572"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "75"
+                                                    },
+                                                    "id": "c007dca1-a563-4cae-aa33-32eb29144033"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_FALSE",
+                                                    "args": {
+                                                        "variable": "28"
+                                                    },
+                                                    "id": "20aeafa4-13cb-40ac-a56b-47798219bbf8"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_FALSE",
+                                                    "args": {
+                                                        "variable": "25"
+                                                    },
+                                                    "id": "911d49ea-7938-4977-a61e-2243c7efc803"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "8"
+                                                    },
+                                                    "id": "c0487671-37d3-48e2-b117-9dee0e4d9e9a"
+                                                },
+                                                {
+                                                    "command": "EVENT_CAMERA_SHAKE",
+                                                    "args": {
+                                                        "time": 1.5,
+                                                        "frames": 30,
+                                                        "shakeDirection": "horizontal",
+                                                        "__scriptTabs": "text",
+                                                        "text": [
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Amazing.\nHere, just\neat it now\ndude.!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                                        ],
+                                                        "nameTag": "Rosty",
+                                                        "nameX": 2,
+                                                        "avatarType": "large",
+                                                        "avatarId": "",
+                                                        "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                                        "avatarX": 2,
+                                                        "avatarY": 2,
+                                                        "avatarWidth": 4,
+                                                        "orientation": "left"
+                                                    },
+                                                    "id": "cc93034b-5b3d-448b-be7e-77b9ce46d559"
+                                                },
+                                                {
+                                                    "command": "EVENT_PALETTE_SET_BACKGROUND",
+                                                    "args": {
+                                                        "palette0": "ad7df42b-1ec9-41b1-8d92-0a6ed0a44983",
+                                                        "palette1": "default-bg-4",
+                                                        "palette2": "7923fcea-e7a2-4d45-8c5c-5c71a70f82ff",
+                                                        "palette3": "5a123d15-e4df-4990-85fa-de43ed7174a3",
+                                                        "palette4": "default-bg-2",
+                                                        "palette5": "default-ui",
+                                                        "palette6": "4ed76df8-e885-4b8f-86a3-26d78dd17902",
+                                                        "palette7": "9e24f625-dcf0-4263-91f6-878e76fa95d7"
+                                                    },
+                                                    "id": "49295b42-25ff-4be3-aa1c-73ae467839e1"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+                                                    "args": {
+                                                        "speedIn": 1,
+                                                        "speedOut": 1,
+                                                        "speed": 4,
+                                                        "allowFastForward": true
+                                                    },
+                                                    "id": "037e5962-c2ca-4cb5-8a62-843ce3f65b0d"
+                                                },
+                                                {
+                                                    "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                                    "args": {
+                                                        "actorId": "player",
+                                                        "speed": 0.5
+                                                    },
+                                                    "id": "a140b886-4315-4898-9815-cdbc3b7acf25"
+                                                },
+                                                {
+                                                    "command": "EVENT_PALETTE_SET_UI",
+                                                    "args": {
+                                                        "palette": ""
+                                                    },
+                                                    "id": "072f7371-ebbc-482d-9963-3aece02b1d05"
+                                                },
+                                                {
+                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                    "args": {
+                                                        "__scriptTabs": "text",
+                                                        "text": [
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!ayooOoOoooO\nooOoOoooOoOo\noOOoOoOoOoo\nooOOoOoOoOo!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
+                                                        ],
+                                                        "nameTag": "Hektar",
+                                                        "nameX": 2,
+                                                        "avatarType": "large",
+                                                        "avatarId": "",
+                                                        "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
+                                                        "avatarX": 2,
+                                                        "avatarY": 2,
+                                                        "avatarWidth": 4,
+                                                        "orientation": "left"
+                                                    },
+                                                    "id": "1843d2bc-4048-4cc5-baf6-09dab33db1ff"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                    "args": {
+                                                        "__scriptTabs": "text",
+                                                        "text": [
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!All good!!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                                        ],
+                                                        "nameTag": "Rosty",
+                                                        "nameX": 2,
+                                                        "avatarType": "large",
+                                                        "avatarId": "",
+                                                        "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                                        "avatarX": 2,
+                                                        "avatarY": 2,
+                                                        "avatarWidth": 4,
+                                                        "orientation": "left"
+                                                    },
+                                                    "id": "7e73f22a-692f-4f4b-8f78-d387166d393f"
+                                                }
+                                            ]
+                                        },
+                                        "id": "5f130079-1ce4-4e9a-9db4-17928e1f130c"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "532ea475-69f5-4586-a763-6dc46edaae0d"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a024ed6a-6c88-44e1-b651-35452d1014fd",
+                    "x": 7,
+                    "y": 4
                 }
             ],
             "triggers": [
@@ -20130,6 +20720,24 @@
                     "width": 4,
                     "height": 1,
                     "script": [
+                        {
+                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                            "args": {
+                                "actorId": "$self$",
+                                "speed": 1
+                            },
+                            "id": "99ccd1c8-efba-4b91-997d-a7583e8d892c"
+                        },
+                        {
+                            "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+                            "args": {
+                                "speedIn": 1,
+                                "speedOut": 1,
+                                "speed": 1,
+                                "allowFastForward": true
+                            },
+                            "id": "1633a2a8-08dc-44c7-963d-0eb511d95797"
+                        },
                         {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
@@ -20154,6 +20762,24 @@
                     "height": 2,
                     "script": [
                         {
+                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                            "args": {
+                                "actorId": "$self$",
+                                "speed": 1
+                            },
+                            "id": "230b496b-229d-4e08-91d0-2e20c9c1519c"
+                        },
+                        {
+                            "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+                            "args": {
+                                "speedIn": 1,
+                                "speedOut": 1,
+                                "speed": 1,
+                                "allowFastForward": true
+                            },
+                            "id": "89c2acc2-3b93-4e3f-b8eb-0a4cf5c4396c"
+                        },
+                        {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "a8021669-bd73-4f53-a4cd-19038a0f9684",
@@ -20167,9 +20793,46 @@
                     ],
                     "leaveScript": [],
                     "symbol": "trigger_20"
+                },
+                {
+                    "name": "",
+                    "id": "f703f14f-ab45-4468-a04b-c7284609f5c4",
+                    "x": 15,
+                    "y": 0,
+                    "symbol": "trigger_47",
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                            "args": {
+                                "actorId": "$self$",
+                                "speed": 1
+                            },
+                            "id": "11048cd0-3b99-4eb4-9b05-07d56e421b0b"
+                        },
+                        {
+                            "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+                            "args": {
+                                "speedIn": 1,
+                                "speedOut": 1,
+                                "speed": 1,
+                                "allowFastForward": true
+                            },
+                            "id": "093d04f4-21d0-47c8-91dc-f17bbf76957e"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "28"
+                    },
+                    "id": "9b5ce7cf-7bd8-4b5e-8fb4-5fe7a336942d"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -20248,7 +20911,8 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Map Name"
+                        "__label": "Map Name",
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -20294,6 +20958,82 @@
                         ]
                     },
                     "id": "704f4d06-94d2-4296-bf3d-61e126fe934b"
+                },
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "75",
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_PALETTE_SET_UI",
+                                "args": {
+                                    "palette": ""
+                                },
+                                "id": "309c5aac-1f78-483a-a419-ad31cc7b4f70"
+                            },
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!...!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!",
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!I'm getting\nflashbacks..!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!"
+                                    ],
+                                    "nameTag": "Hektar",
+                                    "nameX": 2,
+                                    "avatarType": "large",
+                                    "avatarId": "",
+                                    "largeAvatar": "!F:2d3cd2be-8ea9-4bf9-a4d2-2c4514b2dfb8!ABCD\nQRST\nabcd\nqrst",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 4,
+                                    "orientation": "left"
+                                },
+                                "id": "81934578-da96-4165-9d10-f85716783e47"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 1.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Amazing.\nHere, just\neat it now\ndude.!F:b38e1640-7e65-4290-a11b-ad90be7174d3!"
+                                    ],
+                                    "nameTag": "Rosty",
+                                    "nameX": 2,
+                                    "avatarType": "large",
+                                    "avatarId": "",
+                                    "largeAvatar": "!F:b38e1640-7e65-4290-a11b-ad90be7174d3!ABCD\nQRST\nabcd\nqrst",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 4,
+                                    "orientation": "left"
+                                },
+                                "id": "86e5c5a9-d2b5-45e3-8c07-7a36cae9cee7"
+                            },
+                            {
+                                "command": "EVENT_PALETTE_SET_BACKGROUND",
+                                "args": {
+                                    "palette0": "ad7df42b-1ec9-41b1-8d92-0a6ed0a44983",
+                                    "palette1": "default-bg-4",
+                                    "palette2": "7923fcea-e7a2-4d45-8c5c-5c71a70f82ff",
+                                    "palette3": "5a123d15-e4df-4990-85fa-de43ed7174a3",
+                                    "palette4": "default-bg-2",
+                                    "palette5": "default-ui",
+                                    "palette6": "4ed76df8-e885-4b8f-86a3-26d78dd17902",
+                                    "palette7": "9e24f625-dcf0-4263-91f6-878e76fa95d7"
+                                },
+                                "id": "e5772b5f-a577-4c94-b10a-20ae475c53c4"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "c5344339-1d70-4b30-846b-84df2629b6c7"
                 }
             ],
             "playerHit1Script": [],
@@ -21853,11 +22593,7 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -21875,6 +22611,10 @@
                 0,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
                 0,
                 15,
                 0,
@@ -21953,7 +22693,6 @@
                 0,
                 0,
                 15,
-                0,
                 0,
                 0,
                 0,
@@ -21973,6 +22712,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -22023,7 +22763,6 @@
                 0,
                 0,
                 15,
-                0,
                 0,
                 0,
                 0,
@@ -22044,21 +22783,25 @@
                 0,
                 0,
                 0,
-                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
                 0,
                 0,
-                15,
                 15,
                 0,
                 0,
                 0,
-                0,
-                0,
-                15,
                 0,
                 0,
                 0,
@@ -22079,13 +22822,10 @@
                 15,
                 15,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -22097,9 +22837,6 @@
                 15,
                 15,
                 15,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -22116,10 +22853,13 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
+                15,
                 0,
                 0,
+                15,
                 15,
                 0,
                 0,
@@ -22148,7 +22888,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -22182,14 +22922,14 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
-                15,
+                0,
+                0,
+                0,
+                0,
                 15,
                 0,
                 0,
@@ -22200,7 +22940,6 @@
                 15,
                 15,
                 15,
-                0,
                 0,
                 0,
                 0,
@@ -22211,27 +22950,28 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
+                15,
+                15,
                 15,
                 15,
                 15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 15,
                 15,
@@ -22245,9 +22985,7 @@
                 0,
                 0,
                 0,
-                15,
                 15,
-                15,
                 0,
                 0,
                 0,
@@ -22256,7 +22994,9 @@
                 0,
                 0,
                 0,
-                15,
+                0,
+                0,
+                0,
                 15,
                 0,
                 0,
@@ -22284,9 +23024,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                0,
                 0,
                 0,
                 0,
@@ -22297,8 +23034,6 @@
                 0,
                 15,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -22310,24 +23045,29 @@
                 0,
                 0,
                 0,
-                15,
                 0,
                 0,
                 0,
                 0,
+                0,
                 15,
                 0,
                 0,
                 0,
-                15,
+                0,
                 15,
                 0,
                 0,
-                15,
-                15,
+                0,
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
                 0,
                 0,
                 0,
@@ -23011,6 +23751,119 @@
                     "x": 19,
                     "y": 8,
                     "symbol": "actor_31"
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "9a76c515-1539-45c2-8036-6c12ec465ce7",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_PALETTE_SET_UI",
+                            "args": {
+                                "palette": "",
+                                "__collapse": false
+                            },
+                            "id": "67d299bf-f09c-409b-bf3d-4ce2fc54a74d"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Where would you\nlike to travel?"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "bed9f6a9-1180-4286-896a-a9b42326f6fa"
+                        },
+                        {
+                            "command": "EVENT_MENU",
+                            "args": {
+                                "variable": "L0",
+                                "items": 3,
+                                "option1": "Kanga Street",
+                                "option2": "Hektar Street",
+                                "option3": "Cancel",
+                                "option4": "",
+                                "option5": "",
+                                "option6": "",
+                                "option7": "",
+                                "option8": "",
+                                "cancelOnB": true,
+                                "layout": "dialogue",
+                                "cancelOnLastOption": true
+                            },
+                            "id": "68018996-4564-405c-adeb-8a151f6add13"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "operator": "==",
+                                "comparator": 1,
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "b7b91980-33b4-4ef6-a9ee-cd94da24ba9c",
+                                            "x": 2,
+                                            "y": 30,
+                                            "direction": "down",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "3273f99f-c5f5-4729-ba53-e64f45485f71"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "8012a8de-3f68-492b-affa-7ea537ec686d"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "operator": "==",
+                                "comparator": 2,
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "36e7cc1d-01c5-4cc1-9abc-720bd7e298ae",
+                                            "x": 2,
+                                            "y": 13,
+                                            "direction": "down",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "b611f265-a4f8-4953-ab9e-09a0fd189d5a"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "f2eb1673-e1cb-4606-8773-998c38712300"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "b854b612-6783-4e6b-8b58-01f145c12380",
+                    "x": 22,
+                    "y": 17,
+                    "symbol": "actor_88"
                 }
             ],
             "triggers": [
@@ -45530,7 +46383,7 @@
             "id": "60d710c1-e8af-43fc-a00b-fdc625d2b6b1",
             "symbol": "scene_0",
             "x": 2357.511904761905,
-            "y": 913.9112554112551,
+            "y": 913.4668109668106,
             "actors": [
                 {
                     "name": "",
@@ -46284,7 +47137,7 @@
                                             "__scriptTabs": "text",
                                             "text": [
                                                 "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!we had this\nstatue of you\ncommissioned!!F:11fca27a-0425-45b4-a812-27759c97bbcc!",
-                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!everyone in\nNew Selo loves\nyou!!F:11fca27a-0425-45b4-a812-27759c97bbcc!",
+                                                "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!everyone in\nNew Celo loves\nyou!!F:11fca27a-0425-45b4-a812-27759c97bbcc!",
                                                 "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!thank you for\neverything!F:11fca27a-0425-45b4-a812-27759c97bbcc!"
                                             ],
                                             "nameTag": "Kasun",
@@ -46314,7 +47167,7 @@
                                             "text": [
                                                 "Thank you for \nplaying Pterotale.",
                                                 "We really hope you\nenjoyed your time\nmeeting the team",
-                                                "and exploring the\nworld of New Selo.",
+                                                "and exploring the\nworld of New Celo.",
                                                 "The game has now\nended.",
                                                 "If you would like \nto explore further",
                                                 "please create a\nnew Save file!",
@@ -51870,13 +52723,13 @@
                 5,
                 5,
                 5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
                 5,
                 5,
                 5,
@@ -51906,12 +52759,12 @@
                 3,
                 3,
                 3,
+                3,
+                3,
+                3,
+                3,
                 5,
-                5,
-                5,
-                5,
-                5,
-                5,
+                3,
                 5,
                 5,
                 5,
@@ -51941,89 +52794,12 @@
                 3,
                 3,
                 3,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
                 3,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
                 3,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
                 3,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
                 3,
-                5,
-                5,
+                3,
+                3,
                 5,
                 5,
                 5,
@@ -52052,6 +52828,83 @@
                 5,
                 5,
                 5,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                3,
+                5,
+                5,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                3,
+                5,
+                5,
+                5,
+                5,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
                 5,
                 5,
                 5,
@@ -52119,22 +52972,14 @@
                 5,
                 5,
                 5,
-                5,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
                 3,
                 5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                3,
-                5,
-                5,
-                5,
-                5,
-                3,
                 5,
                 5,
                 3,
@@ -52145,6 +52990,7 @@
                 3,
                 5,
                 5,
+                3,
                 5,
                 5,
                 5,
@@ -52156,11 +53002,18 @@
                 5,
                 5,
                 5,
+                3,
                 5,
                 5,
                 5,
                 5,
-                5
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
             ]
         },
         {
@@ -58670,146 +59523,8 @@
                 1,
                 1,
                 1,
-                7,
-                7,
-                1,
-                1,
-                2,
-                7,
-                1,
-                1,
-                1,
-                1,
-                7,
-                1,
-                1,
-                1,
-                1,
-                7,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                7,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                7,
-                1,
-                1,
-                1,
-                1,
-                7,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                2,
-                2,
-                2,
-                1,
-                1,
-                7,
+                4,
+                4,
                 1,
                 1,
                 1,
@@ -58827,13 +59542,10 @@
                 1,
                 1,
                 1,
-                7,
-                7,
-                7,
                 1,
-                7,
                 1,
-                7,
+                1,
+                4,
                 1,
                 1,
                 1,
@@ -58849,13 +59561,8 @@
                 1,
                 1,
                 1,
+                4,
                 1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                7,
                 1,
                 1,
                 1,
@@ -58892,6 +59599,152 @@
                 1,
                 1,
                 1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                4,
+                4,
+                4,
+                1,
+                4,
+                1,
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
                 2,
                 1,
                 1,
@@ -58910,7 +59763,7 @@
                 1,
                 1,
                 1,
-                7,
+                4,
                 1,
                 1,
                 1,
@@ -68623,18 +69476,18 @@
                 6,
                 6,
                 1,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
                 1,
                 1,
                 1,
@@ -68653,18 +69506,18 @@
                 1,
                 1,
                 1,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
                 1,
                 1,
                 1,
@@ -68693,66 +69546,6 @@
                 1,
                 1,
                 1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                2,
-                2,
-                2,
-                1,
-                1,
-                1,
-                6,
-                6,
-                6,
-                6,
-                2,
-                2,
-                6,
-                6,
-                6,
-                6,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                2,
-                2,
-                2,
-                1,
-                1,
-                1,
-                6,
-                1,
-                6,
-                6,
-                2,
-                2,
-                6,
-                6,
-                6,
-                6,
                 1,
                 1,
                 1,
@@ -68803,6 +69596,66 @@
                 1,
                 1,
                 1,
+                6,
+                1,
+                6,
+                6,
+                2,
+                2,
+                6,
+                6,
+                6,
+                6,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                6,
+                6,
+                6,
+                6,
+                2,
+                2,
+                6,
+                6,
+                6,
+                6,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
                 1,
                 1,
                 2,
@@ -69069,10 +69922,10 @@
                 2,
                 2,
                 2,
-                7,
-                7,
-                7,
-                7,
+                4,
+                4,
+                4,
+                4,
                 6,
                 6,
                 1,
@@ -69099,10 +69952,10 @@
                 2,
                 2,
                 2,
-                7,
-                7,
-                7,
-                7,
+                4,
+                4,
+                4,
+                4,
                 6,
                 6,
                 1,
@@ -74090,7 +74943,7 @@
             "numFrames": 250,
             "type": "animated",
             "filename": "Spritesheet.png",
-            "checksum": "156c737b1f69edf8b534175146fd0a6e896b9747",
+            "checksum": "471fd95d8e493956017e87be5fa66cb22bdc71b1",
             "width": 4000,
             "height": 2080,
             "states": [
@@ -82227,6 +83080,188 @@
             "animSpeed": 15
         },
         {
+            "id": "4771ca49-e512-4332-902c-631ebb647eb4",
+            "name": "npc-mark",
+            "symbol": "sprite_npc_mark",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "npc-mark.png",
+            "checksum": "a33be6e989f11b9d9c0d76c4b54d0c556e330aab",
+            "width": 48,
+            "height": 16,
+            "states": [
+                {
+                    "id": "61f8db80-0e8c-4d6f-9e70-0607038f179c",
+                    "name": "",
+                    "animationType": "multi",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "305a58c9-e92e-4cf3-a73f-450f700c3ced",
+                            "frames": [
+                                {
+                                    "id": "2dbd22ee-5965-465c-825f-21a93bcc0b62",
+                                    "tiles": [
+                                        {
+                                            "id": "583bc4f0-29ca-4875-b0d0-89d721ebbc54",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 32,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "490ea1a4-48b1-4a09-9097-6568dcc45387",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 40,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4c8993b-aa23-422a-9b85-dcc22e37b793",
+                            "frames": [
+                                {
+                                    "id": "3e23f26d-8041-4aa0-83a8-b61a5e124adc",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2d0dcb96-1891-4582-9eaa-a0424437fc2e",
+                            "frames": [
+                                {
+                                    "id": "e34d359d-0972-4b4b-862e-8136227314c0",
+                                    "tiles": [
+                                        {
+                                            "id": "2579ec9f-6bcb-4609-ad29-79cfb283f02c",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "692667eb-5aac-4a50-a0f6-39550cee16ec",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1a0bdcf6-39c4-47bd-93cc-a36035eb6914",
+                            "frames": [
+                                {
+                                    "id": "32f8d135-4ee7-4be1-b262-a5fa445d4c85",
+                                    "tiles": [
+                                        {
+                                            "id": "ae750b95-b2c1-4bdc-ae15-c5f7aa23d02f",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "37a95812-4da9-4123-9a43-02effac19835",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "47407b9c-f5a4-4e0a-83ce-1e91f513752c",
+                            "frames": [
+                                {
+                                    "id": "987d64bc-40ce-4d8c-86aa-1421f156e3c6",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "463e9eed-d3ae-4c47-8068-f783d8e1b6bd",
+                            "frames": [
+                                {
+                                    "id": "3e0731ed-24b6-4494-b9e6-cd0fe03461ba",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "59afd4f9-5d72-440e-a646-5cd812150a91",
+                            "frames": [
+                                {
+                                    "id": "5bae5be1-9406-4e6e-a214-efbe65a7ab62",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "78f07482-20f9-41b9-81e8-6ebbb8ad3351",
+                            "frames": [
+                                {
+                                    "id": "807e7cdb-3f84-4c7f-8b8b-60c236092a4e",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 4,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
             "id": "f5e3e4cb-22f9-4b90-bc50-9123df50a5b6",
             "name": "npc-reem",
             "symbol": "sprite_npc_reem",
@@ -82400,6 +83435,188 @@
                 }
             ],
             "numTiles": 6,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
+            "id": "6a14e2ae-bd32-43ce-a229-028f81953766",
+            "name": "npc-rosty",
+            "symbol": "sprite_npc_rosty",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "npc-rosty.png",
+            "checksum": "a37382ea9866790a4706f2bdb5c2f1f883c0260b",
+            "width": 48,
+            "height": 16,
+            "states": [
+                {
+                    "id": "a3edc778-c963-4238-8f56-35f7afda70da",
+                    "name": "",
+                    "animationType": "multi",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "ea769f8c-3804-4e42-9103-656eae3b5314",
+                            "frames": [
+                                {
+                                    "id": "88ecb992-8f74-4cc6-936b-f36605471d3a",
+                                    "tiles": [
+                                        {
+                                            "id": "7c49ef11-c00d-4d34-b086-048b2ae3c94f",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 32,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "8aec7171-2372-43d2-a2d8-3a5429861034",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 40,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0bc19fb3-189e-4820-89ef-59ccc879af60",
+                            "frames": [
+                                {
+                                    "id": "42291c49-9823-46a4-ab6d-8b466b70961d",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b50c1ed7-d2a2-4c8b-9e7a-515227c0a7c4",
+                            "frames": [
+                                {
+                                    "id": "d0d66eb8-f488-4d36-a707-aec3bb34ed94",
+                                    "tiles": [
+                                        {
+                                            "id": "c1857409-61ca-4057-a7c3-2308b5ff3287",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "ba831e56-8c6e-4abf-aa39-da985e26752a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6e059691-f6c7-4361-b209-653814f220c7",
+                            "frames": [
+                                {
+                                    "id": "9aa04c1f-9d5a-49ad-b78c-79fce02d8226",
+                                    "tiles": [
+                                        {
+                                            "id": "aebafa81-1cf8-4f5a-ab87-6d67b39bb8b5",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "9d9cebe1-6377-48ab-8163-83b965a67f13",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "d763a31c-fc5d-4b6a-a95f-98ba31eaa7a7",
+                            "frames": [
+                                {
+                                    "id": "0a1fe71c-2d37-4a00-b246-bc2d5be86f1b",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "54f7063b-d70a-475d-a158-2b119de4418c",
+                            "frames": [
+                                {
+                                    "id": "0033d210-b00a-40f4-82cd-dbe042dd5d4e",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9b785024-8f46-4a7d-a325-44d68b24c36c",
+                            "frames": [
+                                {
+                                    "id": "7351498c-8175-421d-a9b9-904cba230b37",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "17404dec-31a7-404c-88e6-a0c1bd7da3dd",
+                            "frames": [
+                                {
+                                    "id": "e4654db1-569c-4538-8cd7-e63b9063ffb3",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 4,
             "canvasWidth": 16,
             "canvasHeight": 16,
             "boundsX": 0,
@@ -86437,12 +87654,28 @@
             "filename": "Lex.png"
         },
         {
+            "id": "f1faa176-fce6-41f0-9bca-0e5c307dca24",
+            "name": "Mark",
+            "symbol": "font_mark",
+            "width": 128,
+            "height": 112,
+            "filename": "Mark.png"
+        },
+        {
             "id": "b0ee29b2-006b-4f0b-b127-4e1a5af7d22e",
             "name": "Reem",
             "symbol": "font_reem",
             "width": 128,
             "height": 112,
             "filename": "Reem.png"
+        },
+        {
+            "id": "b38e1640-7e65-4290-a11b-ad90be7174d3",
+            "name": "Rosty",
+            "symbol": "font_rosty",
+            "width": 128,
+            "height": 112,
+            "filename": "Rosty.png"
         },
         {
             "id": "e6bb4bf8-28a8-4161-9cc7-3e27b1ad3964",
@@ -86924,6 +88157,11 @@
             "symbol": "var_mainquestsdone"
         },
         {
+            "id": "74",
+            "name": "disableProduceRefill",
+            "symbol": "var_disableproducerefill"
+        },
+        {
             "id": "e576a447-9dcf-46e5-8dc3-b1431e2e0509__L0",
             "name": "busTravel",
             "symbol": "var_bustravel"
@@ -87004,9 +88242,14 @@
             "symbol": "var_refillproduce_0"
         },
         {
-            "id": "74",
-            "name": "disableProduceRefill",
-            "symbol": "var_disableproducerefill"
+            "id": "75",
+            "name": "consumedShrooms",
+            "symbol": "var_consumedshrooms"
+        },
+        {
+            "id": "b854b612-6783-4e6b-8b58-01f145c12380__L0",
+            "name": "busTravel",
+            "symbol": "var_bustravel_1"
         }
     ],
     "engineFieldValues": [
@@ -87016,17 +88259,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "7b4c6749-3f8c-41ed-bb6b-547cd04c33fb",
-        "startX": 23,
-        "startY": 9,
+        "startSceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
+        "startX": 13,
+        "startY": 22,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1280,
-        "worldScrollY": 528,
-        "zoom": 100,
+        "worldScrollX": 694,
+        "worldScrollY": 1513,
+        "zoom": 175,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -87054,8 +88297,8 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            135,
+            206,
+            134,
             976
         ],
         "showNavigator": true,
