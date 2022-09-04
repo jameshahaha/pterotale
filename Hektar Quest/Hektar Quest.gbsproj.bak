@@ -20829,7 +20829,8 @@
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "28"
+                        "variable": "28",
+                        "__comment": true
                     },
                     "id": "9b5ce7cf-7bd8-4b5e-8fb4-5fe7a336942d"
                 },
@@ -88267,8 +88268,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1166,
-        "worldScrollY": 231,
+        "worldScrollX": 385,
+        "worldScrollY": 657,
         "zoom": 125,
         "customColorsEnabled": true,
         "sgbEnabled": false,

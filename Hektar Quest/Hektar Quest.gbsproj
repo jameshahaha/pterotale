@@ -25476,7 +25476,7 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "e39ece3b-a6c8-435d-87f8-b41540da7e43",
-                                "x": 33,
+                                "x": 31,
                                 "y": 6,
                                 "direction": "left",
                                 "fadeSpeed": "2"
@@ -88163,6 +88163,11 @@
             "symbol": "var_disableproducerefill"
         },
         {
+            "id": "75",
+            "name": "consumedShrooms",
+            "symbol": "var_consumedshrooms"
+        },
+        {
             "id": "e576a447-9dcf-46e5-8dc3-b1431e2e0509__L0",
             "name": "busTravel",
             "symbol": "var_bustravel"
@@ -88243,11 +88248,6 @@
             "symbol": "var_refillproduce_0"
         },
         {
-            "id": "75",
-            "name": "consumedShrooms",
-            "symbol": "var_consumedshrooms"
-        },
-        {
             "id": "b854b612-6783-4e6b-8b58-01f145c12380__L0",
             "name": "busTravel",
             "symbol": "var_bustravel_1"
@@ -88268,9 +88268,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 385,
-        "worldScrollY": 657,
-        "zoom": 125,
+        "worldScrollX": 4444,
+        "worldScrollY": 5787,
+        "zoom": 475,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
