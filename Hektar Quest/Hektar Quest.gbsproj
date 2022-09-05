@@ -2514,8 +2514,8 @@
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
                                             "sceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
-                                            "x": 18,
-                                            "y": 17,
+                                            "x": 22,
+                                            "y": 19,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -20402,7 +20402,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Left - Beach\nUp - Ocean Outlook"
+                                    "Left - Beach\nUp - Ocean Lookout"
                                 ],
                                 "avatarId": ""
                             },
@@ -91982,9 +91982,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1851,
-        "worldScrollY": 861,
-        "zoom": 125,
+        "worldScrollX": 0,
+        "worldScrollY": 264,
+        "zoom": 175,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

@@ -2514,8 +2514,8 @@
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
                                             "sceneId": "d23eb31a-6065-423d-b1d0-d35bcc1dd3b8",
-                                            "x": 18,
-                                            "y": 17,
+                                            "x": 22,
+                                            "y": 19,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -4600,7 +4600,7 @@
                         {
                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                             "args": {
-                                "__scriptTabs": "avatar",
+                                "__scriptTabs": "text",
                                 "text": [
                                     "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Get lost!\nGo use the\nbus stop to\nKanga Street!!F:e6bb4bf8-28a8-4161-9cc7-3e27b1ad3964!"
                                 ],
@@ -4807,7 +4807,7 @@
                                                                 "command": "EVENT_GROUP",
                                                                 "args": {
                                                                     "__label": "Map Name",
-                                                                    "__collapse": true
+                                                                    "__collapse": false
                                                                 },
                                                                 "children": {
                                                                     "true": [
@@ -4825,7 +4825,7 @@
                                                                                 "closeButton": "a",
                                                                                 "clearPrevious": true,
                                                                                 "text": [
-                                                                                    "Hektar's House"
+                                                                                    "Hektar Street"
                                                                                 ],
                                                                                 "avatarId": "",
                                                                                 "renderOnTop": false
@@ -91982,9 +91982,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1666,
-        "worldScrollY": 690,
-        "zoom": 125,
+        "worldScrollX": 858,
+        "worldScrollY": 1365,
+        "zoom": 425,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
