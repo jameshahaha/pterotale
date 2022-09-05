@@ -4148,11 +4148,6 @@
                 0,
                 0,
                 15,
-                0,
-                0,
-                15,
-                0,
-                0,
                 15,
                 15,
                 15,
@@ -4166,6 +4161,11 @@
                 15,
                 15,
                 15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -4192,10 +4192,10 @@
                 15,
                 0,
                 0,
+                15,
                 0,
                 0,
-                0,
-                0,
+                15,
                 0,
                 15,
                 0,
@@ -10450,8 +10450,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "5ec02ff0-822e-44d8-92bb-2254d021a194",
-                    "x": 13,
-                    "y": 21,
+                    "x": 9,
+                    "y": 23,
                     "symbol": "actor_13"
                 },
                 {
@@ -11245,6 +11245,20 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "14"
+                    },
+                    "id": "ef2a5298-5df8-4d30-b1f8-6194c0f2ef7c"
+                },
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "0"
+                    },
+                    "id": "08ce97f2-9c00-443d-8569-11cc74c1bcca"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -20498,7 +20512,7 @@
                             "args": {
                                 "variable": "28",
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -20538,7 +20552,7 @@
                                         "args": {
                                             "variable": "L0",
                                             "__collapseElse": false,
-                                            "__collapse": false
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true": [
@@ -20976,7 +20990,7 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "75",
-                        "__collapseElse": true
+                        "__collapseElse": false
                     },
                     "children": {
                         "true": [
@@ -22867,21 +22881,10 @@
                 0,
                 0,
                 15,
-                0,
-                0,
-                15,
-                0,
-                0,
                 15,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
+                15,
                 15,
                 15,
                 15,
@@ -22893,6 +22896,17 @@
                 0,
                 0,
                 0,
+                15,
+                15,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -22904,7 +22918,7 @@
                 15,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 15,
@@ -91983,8 +91997,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1725,
-        "worldScrollY": 4555,
+        "worldScrollX": 8615,
+        "worldScrollY": 4842,
         "zoom": 400,
         "customColorsEnabled": true,
         "sgbEnabled": false,
