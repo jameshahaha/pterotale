@@ -5090,7 +5090,8 @@
                 {
                     "command": "EVENT_FADE_IN",
                     "args": {
-                        "speed": 1
+                        "speed": 1,
+                        "__collapse": true
                     },
                     "id": "a8c271ef-8820-4579-a4cd-099b93e499a5"
                 },
@@ -91981,9 +91982,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 273,
-        "zoom": 75,
+        "worldScrollX": 1666,
+        "worldScrollY": 690,
+        "zoom": 125,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
