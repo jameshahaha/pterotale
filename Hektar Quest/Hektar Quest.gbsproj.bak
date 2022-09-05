@@ -4507,7 +4507,7 @@
                                         "args": {
                                             "sceneId": "b7b91980-33b4-4ef6-a9ee-cd94da24ba9c",
                                             "x": 2,
-                                            "y": 30,
+                                            "y": 31,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -20402,7 +20402,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Left - Beach\nUp - Ocean Outlook"
+                                    "Left - Beach\nUp - Ocean Lookout"
                                 ],
                                 "avatarId": ""
                             },
@@ -23830,7 +23830,7 @@
                                         "args": {
                                             "sceneId": "b7b91980-33b4-4ef6-a9ee-cd94da24ba9c",
                                             "x": 2,
-                                            "y": 30,
+                                            "y": 31,
                                             "direction": "down",
                                             "fadeSpeed": "2"
                                         },
@@ -26405,7 +26405,8 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "15",
-                                "__collapseElse": false
+                                "__collapseElse": false,
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -91976,15 +91977,15 @@
     "settings": {
         "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
         "startX": 9,
-        "startY": 11,
+        "startY": 12,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 858,
-        "worldScrollY": 1365,
-        "zoom": 425,
+        "worldScrollX": 1725,
+        "worldScrollY": 4555,
+        "zoom": 400,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -92012,9 +92013,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            134,
-            977
+            182,
+            120,
+            878
         ],
         "showNavigator": true,
         "defaultFontId": "26fa15df-3318-44ad-8bfd-feff8ba7991d",
