@@ -5063,7 +5063,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -5106,7 +5106,7 @@
                                 "command": "EVENT_GROUP",
                                 "args": {
                                     "__label": "Map Name",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -5124,7 +5124,7 @@
                                                 "closeButton": "a",
                                                 "clearPrevious": true,
                                                 "text": [
-                                                    "Hektar's House"
+                                                    "Hektar Street"
                                                 ],
                                                 "avatarId": "",
                                                 "renderOnTop": false
@@ -91981,8 +91981,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 336,
-        "worldScrollY": 115,
+        "worldScrollX": 526,
+        "worldScrollY": 194,
         "zoom": 75,
         "customColorsEnabled": true,
         "sgbEnabled": false,

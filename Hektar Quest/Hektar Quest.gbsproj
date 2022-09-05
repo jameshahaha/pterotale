@@ -3607,7 +3607,7 @@
                                 "command": "EVENT_GROUP",
                                 "args": {
                                     "__label": "Map Name",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -91982,7 +91982,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 526,
-        "worldScrollY": 194,
+        "worldScrollY": 241,
         "zoom": 75,
         "customColorsEnabled": true,
         "sgbEnabled": false,
