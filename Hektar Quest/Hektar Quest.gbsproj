@@ -826,19 +826,6 @@
                     "id": "a2685579-a437-44c5-bac4-f229ed27cb23"
                 },
                 {
-                    "id": "41b284dc-047f-4bb1-ad5c-f8ade30d034e",
-                    "command": "EVENT_AWAIT_INPUT",
-                    "args": {
-                        "input": [
-                            "a",
-                            "b",
-                            "start",
-                            "select"
-                        ],
-                        "__collapse": true
-                    }
-                },
-                {
                     "command": "EVENT_MUSIC_STOP",
                     "args": {
                         "__collapse": true
@@ -855,6 +842,19 @@
                     "id": "61752944-60ac-4b75-9949-19416bc3f00b"
                 },
                 {
+                    "id": "41b284dc-047f-4bb1-ad5c-f8ade30d034e",
+                    "command": "EVENT_AWAIT_INPUT",
+                    "args": {
+                        "input": [
+                            "a",
+                            "b",
+                            "start",
+                            "select"
+                        ],
+                        "__collapse": true
+                    }
+                },
+                {
                     "command": "EVENT_RNG_SEED",
                     "args": {
                         "__collapse": true
@@ -865,7 +865,7 @@
                     "id": "19a94599-0006-4e3f-9049-c5087d230ed8",
                     "command": "EVENT_LOOP",
                     "args": {
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -91981,8 +91981,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 526,
-        "worldScrollY": 241,
+        "worldScrollX": 0,
+        "worldScrollY": 273,
         "zoom": 75,
         "customColorsEnabled": true,
         "sgbEnabled": false,
