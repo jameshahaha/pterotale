@@ -48390,7 +48390,7 @@
             "id": "be927e2b-952a-4f7a-a732-02504634777c",
             "symbol": "scene_28",
             "x": 2081.428571428573,
-            "y": 914.2857142857142,
+            "y": 913.8412698412698,
             "actors": [
                 {
                     "name": "Angela",
@@ -91973,17 +91973,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "681d94de-56a1-49bb-ba91-83622042d106",
-        "startX": 14,
-        "startY": 13,
+        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
+        "startX": 9,
+        "startY": 11,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 5403,
-        "worldScrollY": 6652,
-        "zoom": 425,
+        "worldScrollX": 336,
+        "worldScrollY": 115,
+        "zoom": 75,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
