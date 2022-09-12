@@ -6231,7 +6231,7 @@
                                                         "__scriptTabs": "text",
                                                         "text": [
                                                             "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Anita might\nneed some help\nin the Market-\nplace.!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!",
-                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Head West from\nhere to find\nAnita!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
+                                                            "!F:26fa15df-3318-44ad-8bfd-feff8ba7991d!Head East from\nhere to find\nAnita!!F:f1faa176-fce6-41f0-9bca-0e5c307dca24!"
                                                         ],
                                                         "nameTag": "Mark",
                                                         "nameX": 2,
@@ -6775,7 +6775,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "02bd4ef1-d2b0-4f7c-9337-6ec5760acc2b",
-                    "x": 19,
+                    "x": 20,
                     "y": 16
                 }
             ],
@@ -11248,14 +11248,16 @@
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "14"
+                        "variable": "14",
+                        "__comment": true
                     },
                     "id": "ef2a5298-5df8-4d30-b1f8-6194c0f2ef7c"
                 },
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "0"
+                        "variable": "0",
+                        "__comment": true
                     },
                     "id": "08ce97f2-9c00-443d-8569-11cc74c1bcca"
                 },
@@ -91997,9 +91999,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 8615,
-        "worldScrollY": 4842,
-        "zoom": 400,
+        "worldScrollX": 3838,
+        "worldScrollY": 8523,
+        "zoom": 600,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -92027,9 +92029,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            182,
-            120,
-            878
+            203,
+            133,
+            980
         ],
         "showNavigator": true,
         "defaultFontId": "26fa15df-3318-44ad-8bfd-feff8ba7991d",
